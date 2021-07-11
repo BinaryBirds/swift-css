@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  ColumnRuleStyle.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum ColumnRuleStyleValue: String {
+public enum ColumnRuleStyleValue: String {
     /// Default value. Defines no rule
     case none
     /// Defines a hidden rule
@@ -35,7 +34,11 @@ enum ColumnRuleStyleValue: String {
     case inherit
 }
 
+func ColumnRuleStyle(_ value: String) -> Property {
+    Property(name: "column-rule-style", value: value)
+}
+
 /// Specifies the style of the rule between columns
-func ColumnRuleStyle(_ value: ColumnRuleStyleValue = .none) -> Property {
-    Property(name: "column-rule-style", value: value.rawValue)
+public func ColumnRuleStyle(_ value: ColumnRuleStyleValue = .none) -> Property {
+    ColumnRuleStyle(value.rawValue)
 }

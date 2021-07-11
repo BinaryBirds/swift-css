@@ -32,10 +32,17 @@ public enum BackgroundPositionValue {
     case centerCenter
     /// center bottom
     case centerBottom
-    /// The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. . Default value is: 0% 0%
+    /// The first value is the horizontal position and the second value is the vertical.
+    /// The top left corner is 0% 0%. The right bottom corner is 100% 100%.
+    /// If you only specify one value, the other value will be 50%. .
+    /// Default value is: 0% 0%
     case percent(Double, Double?)
-    /// The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions
-    case position(String, String?)
+    /// The first value is the horizontal position and the second value is the vertical.
+    /// The top left corner is 0 0.
+    /// Units can be pixels (0px 0px) or any other CSS units.
+    /// If you only specify one value, the other value will be 50%.
+    /// You can mix % and positions
+    case position(Unit, Unit?)
     /// Sets this property to its default value.
     case initial
     /// Inherits this property from its parent element.
@@ -70,7 +77,7 @@ public enum BackgroundPositionValue {
         case .percent(let x, let y):
             return "\(x)% \(y ?? 50)%"
         case .position(let x, let y):
-            return "\(x) \(y ?? "50%")"
+            return "\(x.rawValue) \(y?.rawValue ?? "50%")"
         case .initial:
             return "initial"
         case .inherit:

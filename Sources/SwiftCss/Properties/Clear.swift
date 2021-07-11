@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  Clear.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum ClearValue: String {
+public enum ClearValue: String {
     /// Default. The element is not pushed below left or right floated elements
     case none
     /// The element is pushed below left floated elements
@@ -21,7 +21,12 @@ enum ClearValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func Clear(_ value: String) -> Property {
+    Property(name: "clear", value: value)
+}
+
 /// Specifies what should happen with the element that is next to a floating element
-func Clear(_ value: ClearValue) -> Property {
-    Property(name: "clear", value: value.rawValue)
+public func Clear(_ value: ClearValue) -> Property {
+    Clear(value.rawValue)
 }

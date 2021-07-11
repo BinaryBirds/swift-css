@@ -1,14 +1,30 @@
 //
-//  File.swift
-//  
+//  Float.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
+public enum FloatValue: String {
+    /// The element does not float, (will be displayed just where it occurs in the text). This is default    Play it »
+    case none
+    /// The element floats to the left of its container    Play it »
+    case left
+    /// The element floats the right of its container
+    case right
+    /// Sets this property to its default value.
+    case initial
+    /// Inherits this property from its parent element.
+    case inherit
+}
 
-/// Specifies whether an element should float to the left, right, or not at all
 func Float(_ value: String) -> Property {
     Property(name: "float", value: value)
+}
+
+/// Specifies whether an element should float to the left, right, or not at all
+public func Float(_ value: FloatValue = .none) -> Property {
+    Float(value.rawValue)
 }

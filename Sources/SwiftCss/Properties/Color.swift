@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  Color.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum ColorValue {
+public enum ColorValue {
     /// Specifies the text color.
     case color(CSSColor)
     /// Sets this property to its default value.
@@ -27,11 +27,16 @@ enum ColorValue {
     }
 }
 
-/// Sets the color of text
-func Color(_ value: ColorValue) -> Property {
-    Property(name: "color", value: value.rawValue)
+func Color(_ value: String) -> Property {
+    Property(name: "color", value: value)
 }
 
-func Color(_ value: CSSColor) -> Property {
+/// Sets the color of text
+public func Color(_ value: ColorValue) -> Property {
+    Color(value.rawValue)
+}
+
+/// Sets the color of text
+public func Color(_ value: CSSColor) -> Property {
     Color(.color(value))
 }

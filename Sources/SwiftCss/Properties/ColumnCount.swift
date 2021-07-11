@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  ColumnCount.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum ColumnCountValue: ExpressibleByIntegerLiteral {
+public enum ColumnCountValue: ExpressibleByIntegerLiteral {
     
     /// The optimal number of columns into which the content of the element will be flowed
     case number(Int)
@@ -20,7 +18,7 @@ enum ColumnCountValue: ExpressibleByIntegerLiteral {
     /// Inherits this property from its parent element.
     case inherit
     
-    init(integerLiteral value: IntegerLiteralType) {
+    public init(integerLiteral value: IntegerLiteralType) {
         self = .number(value)
     }
     
@@ -37,7 +35,12 @@ enum ColumnCountValue: ExpressibleByIntegerLiteral {
         }
     }
 }
+
+func ColumnCount(_ value: String) -> Property {
+    Property(name: "column-count", value: value)
+}
+
 /// Specifies the number of columns an element should be divided into
-func ColumnCount(_ value: ColumnCountValue = .auto) -> Property {
-    Property(name: "column-count", value: value.rawValue)
+public func ColumnCount(_ value: ColumnCountValue = .auto) -> Property {
+    ColumnCount(value.rawValue)
 }
