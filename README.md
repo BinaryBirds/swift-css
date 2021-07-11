@@ -37,3 +37,7 @@ An awesome Swift CSS DSL library using result builders.
 }
 
 ```
+
+## Credits
+
+- [W3Schools CSS reference](https://www.w3schools.com/cssref/) 

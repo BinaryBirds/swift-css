@@ -10,7 +10,7 @@ import Foundation
 public enum BackgroundSizeValue: String {
     /// Default value. The background image is displayed in its original size
     case auto
-    /// Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". Read about length units
+    /// Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". 
     case length
     /// Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto"
     case percentage

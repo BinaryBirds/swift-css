@@ -14,7 +14,7 @@ public enum BorderWidthValue {
     case thin
     /// Specifies a thick bottom border
     case thick
-    /// Allows you to define the thickness of the bottom border. Read about length units
+    /// Allows you to define the thickness of the bottom border. 
     case length(Unit)
     /// Sets this property to its default value.
     case initial

@@ -29,9 +29,9 @@ public enum AnimationTimingFunctionValue {
     /// Define your own values in the cubic-bezier function
     /// Possible values are numeric values from 0 to 1
     case cubicBezier(Double, Double, Double, Double)
-    /// Sets this property to its default value. Read about initial
+    /// Sets this property to its default value.
     case initial
-    /// Inherits this property from its parent element. Read about inherit
+    /// Inherits this property from its parent element.
     case inherit
     
     var rawValue: String {

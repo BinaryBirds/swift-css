@@ -17,7 +17,7 @@ public enum AnimationDurationValue {
     case seconds(Double)
     /// ms
     case milliseconds(Double)
-    /// Sets this property to its default value. Read about initial
+    /// Sets this property to its default value.
     case initial
     /// Inherits this property from its parent element.
     case inherit

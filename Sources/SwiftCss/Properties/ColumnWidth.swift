@@ -10,7 +10,7 @@ import Foundation
 public enum ColumnWidthValue {
     /// Default value. The column width will be determined by the browser
     case auto
-    /// A length that specifies the width of the columns. The number of columns will be the minimum number of columns needed to show all the content across the element. Read about length units
+    /// A length that specifies the width of the columns. The number of columns will be the minimum number of columns needed to show all the content across the element. 
     case length(Unit)
     /// Sets this property to its default value.
      case initial

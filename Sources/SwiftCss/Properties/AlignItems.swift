@@ -18,7 +18,7 @@ public enum AlignItemsValue: String {
     case flexEnd = "flex-end"
     /// Items are positioned at the baseline of the container
     case baseline
-    /// Sets this property to its default value. Read about initial
+    /// Sets this property to its default value.
     case initial
     /// Inherits this property from its parent element.
     case inherit
