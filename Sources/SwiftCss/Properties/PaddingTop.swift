@@ -12,3 +12,11 @@ import Foundation
 func PaddingTop(_ value: String) -> Property {
     Property(name: "padding-top", value: value)
 }
+
+func PaddingTop(_ value: PaddingValue = .length(.zero)) -> Property {
+    PaddingTop(value.rawValue)
+}
+
+func PaddingTop(_ value: Unit = .zero) -> Property {
+    PaddingTop(.length(value))
+}

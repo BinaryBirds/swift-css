@@ -1,18 +1,22 @@
 //
-//  File.swift
-//  
+//  BorderBottomColor.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-/// Sets the color of the bottom border
-func BorderBottomColor(_ value: CSSColorValue) -> Property {
-    Property(name: "border-bottom-color", value: value.rawValue)
+func BorderBottomColor(_ value: String) -> Property {
+    Property(name: "border-bottom-color", value: value)
 }
 
-func BorderBottomColor(_ value: CSSColor) -> Property {
+/// Sets the color of the bottom border
+public func BorderBottomColor(_ value: CSSColorValue) -> Property {
+    BorderBottomColor(value.rawValue)
+}
+
+/// Sets the color of the bottom border
+public func BorderBottomColor(_ value: CSSColor) -> Property {
     BorderBottomColor(.color(value))
 }

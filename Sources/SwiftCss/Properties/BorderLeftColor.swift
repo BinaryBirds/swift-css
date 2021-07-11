@@ -1,17 +1,22 @@
 //
-//  File.swift
-//  
+//  BorderLeftColor.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-/// Sets the color of the left border
-func BorderLeftColor(_ value: CSSColorValue) -> Property {
-    Property(name: "border-left-color", value: value.rawValue)
+func BorderLeftColor(_ value: String) -> Property {
+    Property(name: "border-left-color", value: value)
 }
 
-func BorderLeftColor(_ value: CSSColor) -> Property {
+/// Sets the color of the left border
+public func BorderLeftColor(_ value: CSSColorValue) -> Property {
+    BorderLeftColor(value.rawValue)
+}
+
+/// Sets the color of the left border
+public func BorderLeftColor(_ value: CSSColor) -> Property {
     BorderLeftColor(.color(value))
 }

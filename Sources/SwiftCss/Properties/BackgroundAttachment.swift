@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundAttachment.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum BackgroundAttachmentValue: String {
+public enum BackgroundAttachmentValue: String {
     /// The background image will scroll with the page. This is default
     case scroll
     /// The background image will not scroll with the page
@@ -20,7 +20,11 @@ enum BackgroundAttachmentValue: String {
     case inherit
 }
 
+func BackgroundAttachment(_ value: String) -> Property {
+    Property(name: "background-attachment", value: value)
+}
+
 /// Sets whether a background image scrolls with the rest of the page, or is fixed
-func BackgroundAttachment(_ value: BackgroundAttachmentValue = .scroll) -> Property {
-    Property(name: "background-attachment", value: value.rawValue)
+public func BackgroundAttachment(_ value: BackgroundAttachmentValue = .scroll) -> Property {
+    BackgroundAttachment(value.rawValue)
 }

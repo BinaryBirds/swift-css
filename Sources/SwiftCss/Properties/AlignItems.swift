@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  AlignItems.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum AlignItemsValue: String {
+public enum AlignItemsValue: String {
     /// Default. Items are stretched to fit the container
     case stretch
     /// Items are positioned at the center of the container
@@ -24,7 +24,11 @@ enum AlignItemsValue: String {
     case inherit
 }
 
+func AlignItems(_ value: String) -> Property {
+    Property(name: "align-items", value: value)
+}
+
 /// Specifies the alignment for items inside a flexible container
-func AlignItems(_ value: AlignItemsValue = .stretch) -> Property {
-    Property(name: "align-items", value: value.rawValue)
+public func AlignItems(_ value: AlignItemsValue = .stretch) -> Property {
+    AlignItems(value.rawValue)
 }

@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  CaptionSide.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum CaptionSideValue: String {
+public enum CaptionSideValue: String {
     /// Puts the caption above the table. This is default
     case top
     /// Puts the caption below the table
@@ -17,7 +17,12 @@ enum CaptionSideValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func CaptionSide(_ value: String) -> Property {
+    Property(name: "caption-side", value: value)
+}
+
 /// Specifies the placement of a table caption
-func CaptionSide(_ value: CaptionSideValue) -> Property {
-    Property(name: "caption-side", value: value.rawValue)
+public func CaptionSide(_ value: CaptionSideValue) -> Property {
+    CaptionSide(value.rawValue)
 }

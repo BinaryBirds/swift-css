@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationDirection.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum AnimationDirectionValue: String {
+public enum AnimationDirectionValue: String {
     /// Default value. The animation is played as normal (forwards)
     case normal
     /// The animation is played in reverse direction (backwards)
@@ -23,7 +22,11 @@ enum AnimationDirectionValue: String {
     case inherit
 }
 
+func AnimationDirection(_ value: String) -> Property {
+    Property(name: "animation-direction", value: value)
+}
+
 /// Specifies whether an animation should be played forwards, backwards or in alternate cycles
-func AnimationDirection(_ value: AnimationDirectionValue = .normal) -> Property {
-    Property(name: "animation-direction", value: value.rawValue)
+public func AnimationDirection(_ value: AnimationDirectionValue = .normal) -> Property {
+    AnimationDirection(value.rawValue)
 }

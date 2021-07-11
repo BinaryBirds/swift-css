@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum Unit {
+public enum Unit {
+    case zero
+
     /// centimeters
     case cm(Double)
     /// millimeters
@@ -42,6 +44,8 @@ enum Unit {
     
     var rawValue: String {
         switch self {
+        case .zero:
+            return "0"
         case .cm(let value):
             return "\(value)cm"
         case .mm(let value):

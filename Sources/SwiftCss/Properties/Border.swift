@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  Border.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BorderWidthValue {
+public enum BorderWidthValue {
     /// Specifies a medium bottom border. This is default
     case medium
     /// Specifies a thin bottom border

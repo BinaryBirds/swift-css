@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationName.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum AnimationNameValue: ExpressibleByStringLiteral {
+public enum AnimationNameValue: ExpressibleByStringLiteral {
     
     /// Specifies the name of the keyframe you want to bind to the selector
     case keyframename(String)
@@ -20,7 +18,7 @@ enum AnimationNameValue: ExpressibleByStringLiteral {
     /// Inherits this property from its parent element.
     case inherit
     
-    init(stringLiteral value: StringLiteralType) {
+    public init(stringLiteral value: StringLiteralType) {
         self = .keyframename(value)
     }
     
@@ -38,7 +36,11 @@ enum AnimationNameValue: ExpressibleByStringLiteral {
     }
 }
 
+func AnimationName(_ value: String) -> Property {
+    Property(name: "animation-name", value: value)
+}
+
 /// Specifies a name for the @keyframes animation
-func AnimationName(_ value: AnimationNameValue = .none) -> Property {
-    Property(name: "animation-name", value: value.rawValue)
+public func AnimationName(_ value: AnimationNameValue = .none) -> Property {
+    AnimationName(value.rawValue)
 }

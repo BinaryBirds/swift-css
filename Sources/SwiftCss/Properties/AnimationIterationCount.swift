@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationIterationCount.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
+public enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
     
     /// A number that defines how many times an animation should be played. Default value is 1
     case number(Int)
@@ -20,7 +18,7 @@ enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
     /// Inherits this property from its parent element.
     case inherit
     
-    init(integerLiteral value: IntegerLiteralType) {
+    public init(integerLiteral value: IntegerLiteralType) {
         self = .number(value)
     }
     
@@ -38,7 +36,11 @@ enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
     }
 }
 
+func AnimationIterationCount(_ value: String) -> Property {
+    Property(name: "animation-iteration-count", value: value)
+}
+
 /// Specifies the number of times an animation should be played
-func AnimationIterationCount(_ value: AnimationIterationCountValue = 1) -> Property {
-    Property(name: "animation-iteration-count", value: value.rawValue)
+public func AnimationIterationCount(_ value: AnimationIterationCountValue = 1) -> Property {
+    AnimationIterationCount(value.rawValue)
 }

@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationPlayState.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum AnimationPlayStyleValue: String {
+public enum AnimationPlayStyleValue: String {
     /// Specifies that the animation is paused
     case paused
     /// Default value. Specifies that the animation is running
@@ -19,7 +18,11 @@ enum AnimationPlayStyleValue: String {
     case inherit
 }
 
+func AnimationPlayState(_ value: String) -> Property {
+    Property(name: "animation-play-state", value: value)
+}
+
 /// Specifies whether the animation is running or paused
-func AnimationPlayState(_ value: AnimationPlayStyleValue = .running) -> Property {
-    Property(name: "animation-play-state", value: value.rawValue)
+public func AnimationPlayState(_ value: AnimationPlayStyleValue = .running) -> Property {
+    AnimationPlayState(value.rawValue)
 }

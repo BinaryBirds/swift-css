@@ -12,3 +12,11 @@ import Foundation
 func PaddingRight(_ value: String) -> Property {
     Property(name: "padding-right", value: value)
 }
+
+func PaddingRight(_ value: PaddingValue = .length(.zero)) -> Property {
+    PaddingRight(value.rawValue)
+}
+
+func PaddingRight(_ value: Unit = .zero) -> Property {
+    PaddingRight(.length(value))
+}

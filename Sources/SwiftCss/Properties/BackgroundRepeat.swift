@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundRepeat.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BackgroundRepeatValue: String {
+public enum BackgroundRepeatValue: String {
     /// The background image is repeated both vertically and horizontally.  The last image will be clipped if it does not fit. This is default
     case `repeat`
     /// The background image is repeated only horizontally
@@ -27,7 +26,11 @@ enum BackgroundRepeatValue: String {
     case inherit
 }
 
+func BackgroundRepeat(_ value: String) -> Property {
+    Property(name: "background-repeat", value: value)
+}
+
 /// Sets if/how a background image will be repeated
-func BackgroundRepeat(_ value: BackgroundRepeatValue = .repeat) -> Property {
-    Property(name: "background-repeat", value: value.rawValue)
+public func BackgroundRepeat(_ value: BackgroundRepeatValue = .repeat) -> Property {
+    BackgroundRepeat(value.rawValue)
 }

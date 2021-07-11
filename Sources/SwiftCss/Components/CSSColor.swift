@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  CSSColor.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 11..
 //
 
 import Foundation
 
-struct CSSColor: ExpressibleByStringLiteral {
+public struct CSSColor: ExpressibleByStringLiteral {
 
     private var css: String
     
@@ -19,7 +19,7 @@ struct CSSColor: ExpressibleByStringLiteral {
 //        css = hex
 //    }
     
-    init(stringLiteral value: StringLiteralType) {
+    public init(stringLiteral value: StringLiteralType) {
         css = value
         /// check if length is valid (000, #000, cafe00, #cafe00)
         assert([3,4,6,7].contains(value.count), "Invalid hex string")

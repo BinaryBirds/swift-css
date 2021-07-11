@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  BreakAfter.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BreakAfterValue: String {
+public enum BreakAfterValue: String {
     /// Default. Automatic page/column/region break after the element
     case auto
     /// Always insert a page-break right after the principal box
@@ -43,7 +42,11 @@ enum BreakAfterValue: String {
     case inherit
 }
 
+func BreakAfter(_ value: String) -> Property {
+    Property(name: "break-after", value: value)
+}
+
 /// Specifies whether or not a page-, column-, or region-break should occur after the specified element
-func BreakAfter(_ value: BreakAfterValue = .auto) -> Property {
-    Property(name: "break-after", value: value.rawValue)
+public func BreakAfter(_ value: BreakAfterValue = .auto) -> Property {
+    BreakAfter(value.rawValue)
 }

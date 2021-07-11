@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  AlignContent.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum AlignContentValue: String {
+public enum AlignContentValue: String {
     /// Default value. Lines stretch to take up the remaining space
     case stretch
     /// Lines are packed toward the center of the flex container
@@ -29,7 +29,12 @@ enum AlignContentValue: String {
     
 }
 
+
+func AlignContent(_ value: String) -> Property {
+    Property(name: "align-content", value: value)
+}
+
 /// Specifies the alignment between the lines inside a flexible container when the items do not use all available space
-func AlignContent(_ value: AlignContentValue = .stretch) -> Property {
-    Property(name: "align-content", value: value.rawValue)
+public func AlignContent(_ value: AlignContentValue = .stretch) -> Property {
+    AlignContent(value.rawValue)
 }

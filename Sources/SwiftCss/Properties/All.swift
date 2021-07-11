@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  All.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum AllValue: String {
+public enum AllValue: String {
     /// Changes all the properties applied to the element or the element's parent to their initial value
     case initial
     /// Changes all the properties applied to the element or the element's parent to their parent value
@@ -16,7 +16,12 @@ enum AllValue: String {
     case unset
 }
 
+
+func All(_ value: String) -> Property {
+    Property(name: "all", value: value)
+}
+
 /// Resets all properties (except unicode-bidi and direction)
-func All(_ value: AllValue) -> Property {
-    Property(name: "all", value: value.rawValue)
+public func All(_ value: AllValue) -> Property {
+    All(value.rawValue)
 }

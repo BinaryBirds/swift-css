@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundOrigin.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum BackgroundOriginValue: String {
+public enum BackgroundOriginValue: String {
     /// Default value. The background image starts from the upper left corner of the padding edge
     case paddingBox = "padding-box"
     /// The background image starts from the upper left corner of the border
@@ -19,8 +19,13 @@ enum BackgroundOriginValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func BackgroundOrigin(_ value: String) -> Property {
+    Property(name: "background-origin", value: value)
+}
+
 /// Specifies the origin position of a background image
-func BackgroundOrigin(_ value: BackgroundOriginValue = .paddingBox) -> Property {
-    Property(name: "background-origin", value: value.rawValue)
+public func BackgroundOrigin(_ value: BackgroundOriginValue = .paddingBox) -> Property {
+    BackgroundOrigin(value.rawValue)
 }
 

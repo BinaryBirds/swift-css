@@ -10,7 +10,7 @@ import XCTest
 
 final class SwiftCssTests: XCTestCase {
     
-    func testValidBucketNames() {
+    func testExample() {
         let sel = buildCSS()
         print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)

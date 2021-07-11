@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundBlendMode.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum BackgroundBlendModeValue: String {
+public enum BackgroundBlendModeValue: String {
     /// This is default. Sets the blending mode to normal
     case normal
     /// Sets the blending mode to multiply
@@ -32,7 +30,11 @@ enum BackgroundBlendModeValue: String {
     case luminosity
 }
 
+func BackgroundBlendMode(_ value: String) -> Property {
+    Property(name: "background-blend-mode", value: value)
+}
+
 /// Specifies the blending mode of each background layer (color/image)
-func BackgroundBlendMode(_ value: BackgroundBlendModeValue = .normal) -> Property {
-    Property(name: "background-blend-mode", value: value.rawValue)
+public func BackgroundBlendMode(_ value: BackgroundBlendModeValue = .normal) -> Property {
+    BackgroundBlendMode(value.rawValue)
 }

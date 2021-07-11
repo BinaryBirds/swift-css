@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundClip.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BackgroundClipValue: String {
+public enum BackgroundClipValue: String {
     /// Default value. The background extends behind the border
     case borderBox = "border-box"
     /// The background extends to the inside edge of the border
@@ -20,8 +19,13 @@ enum BackgroundClipValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func BackgroundClip(_ value: String) -> Property {
+    Property(name: "background-clip", value: value)
+}
+
 /// Defines how far the background (color or image) should extend within an element
-func BackgroundClip(_ value: BackgroundClipValue = .borderBox) -> Property {
-    Property(name: "background-clip", value: value.rawValue)
+public func BackgroundClip(_ value: BackgroundClipValue = .borderBox) -> Property {
+    BackgroundClip(value.rawValue)
 }
 

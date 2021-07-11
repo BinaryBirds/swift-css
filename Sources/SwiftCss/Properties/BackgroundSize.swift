@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundSize.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BackgroundSizeValue: String {
+public enum BackgroundSizeValue: String {
     /// Default value. The background image is displayed in its original size
     case auto
     /// Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". Read about length units
@@ -24,7 +23,12 @@ enum BackgroundSizeValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func BackgroundSize(_ value: String) -> Property {
+    Property(name: "background-size", value: value)
+}
+
 /// Specifies the size of the background images
-func BackgroundSize(_ value: BackgroundSizeValue = .auto) -> Property {
-    Property(name: "background-size", value: value.rawValue)
+public func BackgroundSize(_ value: BackgroundSizeValue = .auto) -> Property {
+    BackgroundSize(value.rawValue)
 }

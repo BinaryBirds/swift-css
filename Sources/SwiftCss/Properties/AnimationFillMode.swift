@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationFillMode.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum AnimationFillModeValue: String {
+public enum AnimationFillModeValue: String {
     /// Default value. Animation will not apply any styles to the element before or after it is executing
     case none
     /// The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
@@ -22,7 +21,12 @@ enum AnimationFillModeValue: String {
     /// Inherits this property from its parent element.
     case inherit
 }
+
+func AnimationFillMode(_ value: String) -> Property {
+    Property(name: "animation-fill-mode", value: value)
+}
+
 /// Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
-func AnimationFillMode(_ value: AnimationFillModeValue = .none) -> Property {
-    Property(name: "animation-fill-mode", value: value.rawValue)
+public func AnimationFillMode(_ value: AnimationFillModeValue = .none) -> Property {
+    AnimationFillMode(value.rawValue)
 }

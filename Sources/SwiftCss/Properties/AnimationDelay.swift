@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  AnimationDelay.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
@@ -11,7 +11,7 @@ import Foundation
 /// Default value is 0.
 /// Negative values are allowed.
 /// If you use negative values, the animation will start as if it had already been playing for N seconds/milliseconds.
-enum AnimationDelayValue {
+public enum AnimationDelayValue {
     case zero
     case seconds(Double)
     case milliseconds(Double)
@@ -42,7 +42,11 @@ enum AnimationDelayValue {
     }
 }
 
+func AnimationDelay(_ value: String) -> Property {
+    Property(name: "animation-delay", value: value)
+}
+
 /// Specifies a delay for the start of an animation
-func AnimationDelay(_ value: AnimationDelayValue = .zero) -> Property {
-    Property(name: "animation-delay", value: value.rawValue)
+public func AnimationDelay(_ value: AnimationDelayValue = .zero) -> Property {
+    AnimationDelay(value.rawValue)
 }

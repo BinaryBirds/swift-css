@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  BoxSizing.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum BoxSizingValue: String {
+public enum BoxSizingValue: String {
     /// Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included
     case contentBox = "content-box"
     /// The width and height properties (and min/max properties) includes content, padding and border
@@ -19,7 +19,11 @@ enum BoxSizingValue: String {
     case inherit
 }
 
+func BoxSizing(_ value: String) -> Property {
+    Property(name: "box-sizing", value: value)
+}
+
 /// Defines how the width and height of an element are calculated: should they include padding and borders, or not
-func BoxSizing(_ value: BoxSizingValue = .contentBox) -> Property {
-    Property(name: "box-sizing", value: value.rawValue)
+public func BoxSizing(_ value: BoxSizingValue = .contentBox) -> Property {
+    BoxSizing(value.rawValue)
 }

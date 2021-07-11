@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  BreakBefore.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum BreakBeforeValue: String {
+public enum BreakBeforeValue: String {
     /// Default. Automatic page/column/region break before the element
     case auto
     /// Always insert a page-break right before the principal box
@@ -44,7 +42,11 @@ enum BreakBeforeValue: String {
     case inherit
 }
 
+func BreakBefore(_ value: String) -> Property {
+    Property(name: "break-before", value: value)
+}
+
 /// Specifies whether or not a page-, column-, or region-break should occur before the specified element
-func BreakBefore(_ value: BreakBeforeValue = .auto) -> Property {
-    Property(name: "break-before", value: value.rawValue)
+public func BreakBefore(_ value: BreakBeforeValue = .auto) -> Property {
+    BreakBefore(value.rawValue)
 }

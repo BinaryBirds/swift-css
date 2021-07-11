@@ -1,15 +1,13 @@
 //
-//  File.swift
-//  
+//  BreakInside.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-
-enum BreakInsideValue: String {
+public enum BreakInsideValue: String {
     /// Default. Automatic page/column/region break inside the element
     case auto
     /// Avoid a page/column/region break inside the element
@@ -26,7 +24,11 @@ enum BreakInsideValue: String {
     case inherit
 }
 
+func BreakInside(_ value: String) -> Property {
+    Property(name: "break-inside", value: value)
+}
+
 /// Specifies whether or not a page-, column-, or region-break should occur inside the specified element
-func BreakInside(_ value: BreakInsideValue = .auto) -> Property {
-    Property(name: "break-inside", value: value.rawValue)
+public func BreakInside(_ value: BreakInsideValue = .auto) -> Property {
+    BreakInside(value.rawValue)
 }

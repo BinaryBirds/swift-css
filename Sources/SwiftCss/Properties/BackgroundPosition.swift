@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  BackgroundPosition.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum BackgroundPositionValue {
+public enum BackgroundPositionValue {
     /// left center
     case left
     /// left top
@@ -79,7 +79,11 @@ enum BackgroundPositionValue {
     }
 }
 
+func BackgroundPosition(_ value: String) -> Property {
+    Property(name: "background-position", value: value)
+}
+
 /// Specifies the position of a background image
-func BackgroundPosition(_ value: BackgroundPositionValue) -> Property {
-    Property(name: "background-position", value: value.rawValue)
+public func BackgroundPosition(_ value: BackgroundPositionValue) -> Property {
+    BackgroundPosition(value.rawValue)
 }

@@ -1,17 +1,22 @@
 //
-//  File.swift
-//  
+//  BackgroundColor.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-/// Specifies the background color of an element
-func BackgroundColor(_ value: CSSColorValue = .transparent) -> Property {
-    Property(name: "background-color", value: value.rawValue)
+func BackgroundColor(_ value: String) -> Property {
+    Property(name: "background-color", value: value)
 }
 
-func BackgroundColor(_ value: CSSColor) -> Property {
+/// Specifies the background color of an element
+public func BackgroundColor(_ value: CSSColorValue = .transparent) -> Property {
+    BackgroundColor(value.rawValue)
+}
+
+/// Specifies the background color of an element
+public func BackgroundColor(_ value: CSSColor) -> Property {
     BackgroundColor(.color(value))
 }

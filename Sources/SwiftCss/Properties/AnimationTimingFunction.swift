@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  AnimationTimingFunction.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum AnimationTimingFunctionValue {
+public enum AnimationTimingFunctionValue {
     /// The animation has the same speed from start to end
     case linear
     /// Default value. The animation has a slow start, then fast, before it ends slowly
@@ -67,7 +66,11 @@ enum AnimationTimingFunctionValue {
     }
 }
 
+func AnimationTimingFunction(_ value: String) -> Property {
+    Property(name: "animation-timing-function", value: value)
+}
+
 /// Specifies the speed curve of an animation
-func AnimationTimingFunction(_ value: AnimationTimingFunctionValue = .linear) -> Property {
-    Property(name: "animation-timing-function", value: value.rawValue)
+public func AnimationTimingFunction(_ value: AnimationTimingFunctionValue = .linear) -> Property {
+    AnimationTimingFunction(value.rawValue)
 }

@@ -1,14 +1,13 @@
 //
-//  File.swift
-//  
+//  BackfaceVisibility.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-
-enum BackfaceVisibilityValue: String {
+public enum BackfaceVisibilityValue: String {
     /// Default value. The backside is visible
     case visible
     /// The backside is not visible
@@ -19,7 +18,11 @@ enum BackfaceVisibilityValue: String {
     case inherit
 }
 
+func BackfaceVisibility(_ value: String) -> Property {
+    Property(name: "backface-visibility", value: value)
+}
+
 /// Defines whether or not the back face of an element should be visible when facing the user
-func BackfaceVisibility(_ value: BackfaceVisibilityValue = .visible) -> Property {
-    Property(name: "backface-visibility", value: value.rawValue)
+public func BackfaceVisibility(_ value: BackfaceVisibilityValue = .visible) -> Property {
+    BackfaceVisibility(value.rawValue)
 }
