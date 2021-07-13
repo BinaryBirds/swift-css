@@ -7,8 +7,35 @@
 
 import Foundation
 
+public enum LeftValue {
+    /// Lets the browser calculate the left edge position. This is default
+    case auto
+    /// Sets the left edge position in px, cm, etc. Negative values are allowed. Read about length units
+    case length(Unit)
+    /// Sets this property to its default value.
+    case initial
+    /// Inherits this property from its parent element.
+    case inherit
 
-/// Specifies the left position of a positioned element
+    var rawValue: String {
+        switch self {
+        case .auto:
+            return "auto"
+        case .length(let value):
+            return value.rawValue
+        case .initial:
+            return "initial"
+        case .inherit:
+            return "inherit"
+        }
+    }
+}
+
 func Left(_ value: String) -> Property {
     Property(name: "left", value: value)
+}
+
+/// Specifies the left position of a positioned element
+public func Left(_ value: LeftValue = .auto) -> Property {
+    Left(value.rawValue)
 }

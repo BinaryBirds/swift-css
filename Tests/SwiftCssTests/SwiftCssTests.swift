@@ -63,6 +63,12 @@ final class SwiftCssTests: XCTestCase {
         .pseudo(.hover)
         All {
             Background("red")
+            Padding(.zero)
+            Margin(.zero)
+        }
+        Element(.p) {
+            Margin(bottom: .px(20))
+            MarginBottom(.px(20))
         }
         Root {
             Color(.blue)

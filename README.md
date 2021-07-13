@@ -38,6 +38,9 @@ An awesome Swift CSS DSL library using result builders.
 
 ```
 
-## Credits
+## Credits & references
 
-- [W3Schools CSS reference](https://www.w3schools.com/cssref/) 
+- [Cascading Style Sheets](https://www.w3.org/Style/CSS/)
+- [CSS Snapshot 2020](https://www.w3.org/TR/css-2020/) 
+- [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
+- [W3Schools CSS reference](https://www.w3schools.com/cssref/)

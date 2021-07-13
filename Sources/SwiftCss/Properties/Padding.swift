@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  Padding.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum PaddingValue {
+public enum PaddingValue {
     /// Specifies a fixed bottom padding in px, pt, cm, etc. Default value is 0.
     case length(Unit)
     /// Sets this property to its default value.
@@ -27,37 +27,40 @@ enum PaddingValue {
     }
 }
 
-
 /// A shorthand property for all the padding-* properties
 func Padding(_ value: String) -> Property {
     Property(name: "padding", value: value)
 }
 
 /// Sets all the Padding properties in one declaration
-func Padding(_ value: PaddingValue = .length(.zero)) -> Property {
+public func Padding(_ value: PaddingValue = .length(.zero)) -> Property {
     Padding(value.rawValue)
 }
 
-func Padding(_ value: Unit = .zero) -> Property {
+public func Padding(_ value: Unit = .zero) -> Property {
     Padding(.length(value))
 }
 
-func Padding(h: PaddingValue = .length(.zero),
-            v: PaddingValue = .length(.zero)) -> Property {
-    Padding(h.rawValue + " " + v.rawValue)
+public func Padding(horizontal: PaddingValue = .length(.zero),
+                    vertical: PaddingValue = .length(.zero)) -> Property {
+    Padding(horizontal.rawValue + " " + vertical.rawValue)
 }
 
-func Padding(h: Unit = .zero, v: Unit = .zero) -> Property {
-    Padding(h: .length(h), v: .length(v))
+public func Padding(horizontal: Unit = .zero,
+                    vertical: Unit = .zero) -> Property {
+    Padding(horizontal: .length(horizontal), vertical: .length(vertical))
 }
 
-func Padding(t: PaddingValue = .length(.zero),
-            r: PaddingValue = .length(.zero),
-            b: PaddingValue = .length(.zero),
-            l: PaddingValue = .length(.zero)) -> Property {
-    Padding(t.rawValue + " " + r.rawValue + " " + b.rawValue + " " + l.rawValue)
+public func Padding(top: PaddingValue = .length(.zero),
+                    right: PaddingValue = .length(.zero),
+                    bottom: PaddingValue = .length(.zero),
+                    left: PaddingValue = .length(.zero)) -> Property {
+    Padding(top.rawValue + " " + right.rawValue + " " + bottom.rawValue + " " + left.rawValue)
 }
 
-func Padding(t: Unit = .zero, r: Unit = .zero, b: Unit = .zero, l: Unit = .zero) -> Property {
-    Padding(t: .length(t), r: .length(r), b: .length(b), l: .length(l))
+public func Padding(top: Unit = .zero,
+                    right: Unit = .zero,
+                    bottom: Unit = .zero,
+                    left: Unit = .zero) -> Property {
+    Padding(top: .length(top), right: .length(right), bottom: .length(bottom), left: .length(left))
 }

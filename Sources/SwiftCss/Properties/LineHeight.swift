@@ -7,8 +7,39 @@
 
 import Foundation
 
+public enum LineHeightValue {
+    /// A normal line height. This is default
+    case normal
+    /// A number that will be multiplied with the current font-size to set the line height
+    case number(Double)
+    /// A fixed line height in px, pt, cm, etc.
+    case length(Unit)
+    /// Sets this property to its default value.
+    case initial
+    /// Inherits this property from its parent element.
+    case inherit
 
-/// Sets the line height
+    var rawValue: String {
+        switch self {
+        case .normal:
+            return "normal"
+        case .number(let value):
+            return String(value)
+        case .length(let value):
+            return value.rawValue
+        case .initial:
+            return "initial"
+        case .inherit:
+            return "inherit"
+        }
+    }
+}
+
 func LineHeight(_ value: String) -> Property {
     Property(name: "line-height", value: value)
+}
+
+/// Sets the line height
+func LineHeight(_ value: LineHeightValue = .normal) -> Property {
+    LineHeight(value.rawValue)
 }

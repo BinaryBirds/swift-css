@@ -1,13 +1,13 @@
 //
-//  File.swift
-//  
+//  Margin.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 import Foundation
 
-enum MarginValue {
+public enum MarginValue {
     /// Specifies a fixed bottom margin in px, cm, em, etc. Default value is 0. Negative values are allowed.
     case length(Unit)
     // The browser calculates a bottom margin
@@ -36,30 +36,34 @@ func Margin(_ value: String) -> Property {
 }
 
 /// Sets all the margin properties in one declaration
-func Margin(_ value: MarginValue = .length(.zero)) -> Property {
+public func Margin(_ value: MarginValue = .length(.zero)) -> Property {
     Margin(value.rawValue)
 }
 
-func Margin(_ value: Unit = .zero) -> Property {
+public func Margin(_ value: Unit = .zero) -> Property {
     Margin(.length(value))
 }
 
-func Margin(h: MarginValue = .length(.zero),
-            v: MarginValue = .length(.zero)) -> Property {
-    Margin(h.rawValue + " " + v.rawValue)
+public func Margin(horizontal: MarginValue = .length(.zero),
+                   vertical: MarginValue = .length(.zero)) -> Property {
+    Margin(horizontal.rawValue + " " + vertical.rawValue)
 }
 
-func Margin(h: Unit = .zero, v: Unit = .zero) -> Property {
-    Margin(h: .length(h), v: .length(v))
+public func Margin(horizontal: Unit = .zero,
+                   vertical: Unit = .zero) -> Property {
+    Margin(horizontal: .length(horizontal), vertical: .length(vertical))
 }
 
-func Margin(t: MarginValue = .length(.zero),
-            r: MarginValue = .length(.zero),
-            b: MarginValue = .length(.zero),
-            l: MarginValue = .length(.zero)) -> Property {
-    Margin(t.rawValue + " " + r.rawValue + " " + b.rawValue + " " + l.rawValue)
+public func Margin(top: MarginValue = .length(.zero),
+                   right: MarginValue = .length(.zero),
+                   bottom: MarginValue = .length(.zero),
+                   left: MarginValue = .length(.zero)) -> Property {
+    Margin(top.rawValue + " " + right.rawValue + " " + bottom.rawValue + " " + left.rawValue)
 }
 
-func Margin(t: Unit = .zero, r: Unit = .zero, b: Unit = .zero, l: Unit = .zero) -> Property {
-    Margin(t: .length(t), r: .length(r), b: .length(b), l: .length(l))
+public func Margin(top: Unit = .zero,
+                   right: Unit = .zero,
+                   bottom: Unit = .zero,
+                   left: Unit = .zero) -> Property {
+    Margin(top: .length(top), right: .length(right), bottom: .length(bottom), left: .length(left))
 }

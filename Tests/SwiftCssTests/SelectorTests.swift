@@ -13,8 +13,8 @@ final class SelectorTests: XCTestCase {
     // MARK: - margin
     
     func testMargin() {
-        XCTAssertEqual(Margin(h: .px(8)).css, "\tmargin: 8.0px 0;\n")
-        XCTAssertEqual(Margin(h: .length(.zero), v: .auto).css, "\tmargin: 0 auto;\n")
+        XCTAssertEqual(Margin(horizontal: .px(8)).css, "\tmargin: 8.0px 0;\n")
+        XCTAssertEqual(Margin(horizontal: .length(.zero), vertical: .auto).css, "\tmargin: 0 auto;\n")
     }
 
     func testMarginBottom() {
@@ -27,8 +27,8 @@ final class SelectorTests: XCTestCase {
     func testPadding() {
         XCTAssertEqual(Padding(.zero).css, "\tpadding: 0;\n")
         XCTAssertEqual(Padding(.rem(8)).css, "\tpadding: 8.0rem;\n")
-        XCTAssertEqual(Padding(h: .px(8)).css, "\tpadding: 8.0px 0;\n")
-        XCTAssertEqual(Padding(h: .length(.zero), v: .inherit).css, "\tpadding: 0 inherit;\n")
+        XCTAssertEqual(Padding(horizontal: .px(8)).css, "\tpadding: 8.0px 0;\n")
+        XCTAssertEqual(Padding(horizontal: .length(.zero), vertical: .inherit).css, "\tpadding: 0 inherit;\n")
     }
 }
 
