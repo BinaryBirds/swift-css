@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AnimationDirectionValue: String {
     /// Default value. The animation is played as normal (forwards)
     case normal

@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridAutoColumnsValue {
     /// Default value. The size of the columns is determined by the size of the container
     case auto

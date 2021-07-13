@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 
 /// Specifies the path to the image to be used as a border
 func BorderImageSource(_ value: String) -> Property {

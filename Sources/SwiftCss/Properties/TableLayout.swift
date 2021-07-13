@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 
 /// Defines the algorithm used to lay out table cells, rows, and columns
 func TableLayout(_ value: String) -> Property {

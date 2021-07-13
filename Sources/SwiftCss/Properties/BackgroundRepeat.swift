@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundRepeatValue: String {
     /// The background image is repeated both vertically and horizontally.  The last image will be clipped if it does not fit. This is default
     case `repeat`

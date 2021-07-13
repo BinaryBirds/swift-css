@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AnimationNameValue: ExpressibleByStringLiteral {
     
     /// Specifies the name of the keyframe you want to bind to the selector

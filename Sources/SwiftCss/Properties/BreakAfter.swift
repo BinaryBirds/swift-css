@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BreakAfterValue: String {
     /// Default. Automatic page/column/region break after the element
     case auto

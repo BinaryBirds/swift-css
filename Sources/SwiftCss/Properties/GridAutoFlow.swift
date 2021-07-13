@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridAutoFlowValue: String {
     /// Default value. Places items by filling each row
     case row

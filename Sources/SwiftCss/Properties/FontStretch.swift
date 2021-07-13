@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FontStretchValue: String {
     /// Makes the text as narrow as it gets
     case ultraCondensed = "ultra-condensed"

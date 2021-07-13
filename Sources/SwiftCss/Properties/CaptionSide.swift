@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum CaptionSideValue: String {
     /// Puts the caption above the table. This is default
     case top

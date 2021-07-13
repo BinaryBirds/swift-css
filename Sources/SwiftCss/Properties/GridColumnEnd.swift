@@ -5,12 +5,10 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridColumnEndValue {
-    /// Default value. The item will span one column    Play it »
+    /// Default value. The item will span one column    
     case auto
-    /// Specifies the number of columns the item will span    Play it »
+    /// Specifies the number of columns the item will span    
     case span(Int)
     /// Specifies on which column to end the display of the item
     case columnLine(Int)

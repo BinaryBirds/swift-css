@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FlexShrinkValue {
 
     /// A number specifying how much the item will shrink relative to the rest of the flexible items. Default value is 1

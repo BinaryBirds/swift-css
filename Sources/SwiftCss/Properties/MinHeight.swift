@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum MinHeightValue {
     /// Default value is 0. Defines the minimum height in px, cm, etc. Read about length units
     case length(Unit)

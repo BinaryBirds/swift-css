@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundClipValue: String {
     /// Default value. The background extends behind the border
     case borderBox = "border-box"

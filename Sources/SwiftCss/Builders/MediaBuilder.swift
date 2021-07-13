@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 09..
 //
 
-import Foundation
-
 //@TODO: rename to RuleBuilder
 @resultBuilder
 enum MediaBuilder {

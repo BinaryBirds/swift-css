@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum MarginValue {
     /// Specifies a fixed bottom margin in px, cm, em, etc. Default value is 0. Negative values are allowed.
     case length(Unit)

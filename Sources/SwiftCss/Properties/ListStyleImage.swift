@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ListStyleImageValue {
     /// A normal line height. This is default
     case none

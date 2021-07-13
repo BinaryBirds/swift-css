@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridColumnGapValue {
     /// Any legal length value, like px or %. 0 is the default value. Read about length units
     case length(Unit)

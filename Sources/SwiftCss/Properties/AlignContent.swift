@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AlignContentValue: String {
     /// Default value. Lines stretch to take up the remaining space
     case stretch

@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BottomValue {
     /// Lets the browser calculate the bottom edge position. This is default
     case auto

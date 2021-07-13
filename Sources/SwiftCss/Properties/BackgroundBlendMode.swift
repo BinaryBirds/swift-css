@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundBlendModeValue: String {
     /// This is default. Sets the blending mode to normal
     case normal

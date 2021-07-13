@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BreakBeforeValue: String {
     /// Default. Automatic page/column/region break before the element
     case auto

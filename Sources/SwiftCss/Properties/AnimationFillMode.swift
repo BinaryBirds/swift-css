@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AnimationFillModeValue: String {
     /// Default value. Animation will not apply any styles to the element before or after it is executing
     case none

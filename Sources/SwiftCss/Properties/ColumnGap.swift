@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ColumnGapValue {
     
     /// A specified length that will set the gap between the columns

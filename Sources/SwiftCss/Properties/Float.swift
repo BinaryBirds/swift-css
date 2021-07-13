@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FloatValue: String {
     /// The element does not float, (will be displayed just where it occurs in the text). This is default
     case none

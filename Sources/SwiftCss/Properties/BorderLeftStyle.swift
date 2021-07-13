@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 
 /// Sets the style of the left border
 func BorderLeftStyle(_ value: String) -> Property {

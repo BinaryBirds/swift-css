@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 func BackgroundColor(_ value: String) -> Property {
     Property(name: "background-color", value: value)
 }

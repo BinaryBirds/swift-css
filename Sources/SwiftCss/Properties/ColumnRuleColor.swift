@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ColumnRuleColorValue {
     /// Specifies the color of the rule.
     case color(CSSColor)

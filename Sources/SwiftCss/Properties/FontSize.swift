@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FontSizeValue {
     /// Sets the font-size to a medium size. This is default
     case medium

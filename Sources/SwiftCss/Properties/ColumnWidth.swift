@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ColumnWidthValue {
     /// Default value. The column width will be determined by the browser
     case auto

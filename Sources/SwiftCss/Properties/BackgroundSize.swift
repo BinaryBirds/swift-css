@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundSizeValue: String {
     /// Default value. The background image is displayed in its original size
     case auto

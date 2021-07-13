@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 /// Specifies the length of time an animation should take to complete one cycle.
 /// This can be specified in seconds or milliseconds.
 /// Default value is 0, which means that no animation will occur

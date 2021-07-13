@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum PaddingValue {
     /// Specifies a fixed bottom padding in px, pt, cm, etc. Default value is 0.
     case length(Unit)
@@ -27,7 +25,6 @@ public enum PaddingValue {
     }
 }
 
-/// A shorthand property for all the padding-* properties
 func Padding(_ value: String) -> Property {
     Property(name: "padding", value: value)
 }

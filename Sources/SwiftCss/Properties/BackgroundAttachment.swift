@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundAttachmentValue: String {
     /// The background image will scroll with the page. This is default
     case scroll

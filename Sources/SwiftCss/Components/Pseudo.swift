@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 /// https://www.w3schools.com/cssref/css_selectors.asp
 enum Pseudo {
     case active

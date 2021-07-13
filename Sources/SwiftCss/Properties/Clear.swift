@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ClearValue: String {
     /// Default. The element is not pushed below left or right floated elements
     case none

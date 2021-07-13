@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum CursorValue: String {
     /// The cursor indicates an alias of something is to be created
     case alias

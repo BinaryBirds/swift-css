@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum EmptyCellsValue: String {
     /// Display borders on empty cells. This is default
     case show

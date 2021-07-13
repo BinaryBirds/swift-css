@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 ///
 /// https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 /// https://www.w3schools.com/TAGS/default.ASP

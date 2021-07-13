@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 
 /// A shorthand property for all the transition-* properties
 func Transition(_ value: String) -> Property {

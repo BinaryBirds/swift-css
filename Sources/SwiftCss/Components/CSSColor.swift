@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 11..
 //
 
-import Foundation
-
 public struct CSSColor: ExpressibleByStringLiteral {
 
     private var css: String

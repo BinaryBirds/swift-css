@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ColumnCountValue: ExpressibleByIntegerLiteral {
     
     /// The optimal number of columns into which the content of the element will be flowed

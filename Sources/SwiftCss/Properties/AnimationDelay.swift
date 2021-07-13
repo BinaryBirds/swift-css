@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 /// Defines the number of seconds (s) or milliseconds (ms) to wait before the animation will start.
 /// Default value is 0.
 /// Negative values are allowed.

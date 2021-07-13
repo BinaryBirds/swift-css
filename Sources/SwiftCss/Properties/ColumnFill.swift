@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ColumnFillValue: String {
     /// Default value. Fills each column with about the same amount of content, but will not allow the columns to be taller than the height
     /// (so, columns might be shorter than the height as the browser distributes the content evenly horizontally)

@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AlignSelfValue: String {
     /// Default. The element inherits its parent container's align-items property, or "stretch" if it has no parent container
     case auto

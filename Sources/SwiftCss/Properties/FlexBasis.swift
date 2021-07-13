@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FlexBasisValue {
     /// Default value. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content
     case auto

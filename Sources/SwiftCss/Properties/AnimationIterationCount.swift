@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
     
     /// A number that defines how many times an animation should be played. Default value is 1

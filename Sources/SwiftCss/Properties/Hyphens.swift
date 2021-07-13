@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum HyphensValue: String {
     /// Words are not hyphenated
     case none

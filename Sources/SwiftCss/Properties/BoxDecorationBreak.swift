@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BoxDecorationBreakValue: String {
     /// Default. Box decorations are applied to the element as a whole and break at the edges of the element fragments
     case slice

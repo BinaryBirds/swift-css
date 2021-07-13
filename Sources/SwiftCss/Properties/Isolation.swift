@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum IsolationValue: String {
     /// Default. A new stacking context is created only if one of the properties applied to the element requires it
     case auto

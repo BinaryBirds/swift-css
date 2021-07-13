@@ -5,10 +5,8 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum HeightValue {
-    /// The browser calculates the height. This is default    Play it »
+    /// The browser calculates the height. This is default    
     case auto
     /// Defines the height in px, cm, etc.
     case length(Unit)

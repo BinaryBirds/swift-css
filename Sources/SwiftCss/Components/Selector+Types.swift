@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 func Root(@PropertyBuilder _ builder: () -> [Property]) -> Selector {
     Selector(":root", builder)
 }

@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 
 /// Specifies the style of the line in a text decoration
 func TextDecorationStyle(_ value: String) -> Property {

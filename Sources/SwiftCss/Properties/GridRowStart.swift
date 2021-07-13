@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridRowStartValue {
     /// Default value. The item will be placed by following the flow.
     case auto

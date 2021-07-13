@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum BackgroundOriginValue: String {
     /// Default value. The background image starts from the upper left corner of the padding edge
     case paddingBox = "padding-box"

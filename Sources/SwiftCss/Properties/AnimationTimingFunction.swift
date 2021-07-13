@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AnimationTimingFunctionValue {
     /// The animation has the same speed from start to end
     case linear

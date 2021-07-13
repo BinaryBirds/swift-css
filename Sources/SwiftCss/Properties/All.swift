@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum AllValue: String {
     /// Changes all the properties applied to the element or the element's parent to their initial value
     case initial

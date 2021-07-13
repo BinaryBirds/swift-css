@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 func BorderBottomColor(_ value: String) -> Property {
     Property(name: "border-bottom-color", value: value)
 }

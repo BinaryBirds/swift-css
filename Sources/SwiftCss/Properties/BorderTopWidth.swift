@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 func BorderTopWidth(_ value: String) -> Property {
     Property(name: "border-top-width", value: value)
 }

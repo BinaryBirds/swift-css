@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum GridTemplateColumnsValue {
     /// Default value. Columns are created if needed
     case none

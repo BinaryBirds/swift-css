@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 func BorderLeftWidth(_ value: String) -> Property {
     Property(name: "border-left-width", value: value)
 }

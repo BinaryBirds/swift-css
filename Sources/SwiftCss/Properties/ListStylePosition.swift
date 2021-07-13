@@ -5,16 +5,14 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum ListStylePositionValue: String {
-    /// The bullet points will be inside the list item    Play it »
+    /// The bullet points will be inside the list item    
     case inside
-    /// The bullet points will be outside the list item. This is default    Play it »
+    /// The bullet points will be outside the list item. This is default    
     case outside
-    /// Sets this property to its default value. Read about initial    Play it »
+    /// Sets this property to its default value.     
     case initial
-    /// Inherits this property from its parent element. Read about inherit
+    /// Inherits this property from its parent element. 
     case inherit
 }
 

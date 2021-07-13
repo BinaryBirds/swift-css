@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 enum FontSizeAdjustValue {
     /// Defines the aspect value to use
     case number(Double)

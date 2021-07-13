@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum HangingPunctuationValue: String {
     /// No punctuation mark may be placed outside the line box at the start or at the end of a full line of text
     case none

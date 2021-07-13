@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum DisplayValue: String {
     /// Displays an element as an inline element (like <span>). Any height and width properties will have no effect
     case inline

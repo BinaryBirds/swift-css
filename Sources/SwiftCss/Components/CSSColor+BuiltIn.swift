@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 11..
 //
 
-import Foundation
-
 public extension CSSColor {
     /// #F0F8FF
     static let aliceBlue = CSSColor(raw: "aliceblue")

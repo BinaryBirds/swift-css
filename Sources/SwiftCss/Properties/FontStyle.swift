@@ -5,8 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-import Foundation
-
 public enum FontStyleValue: String {
     /// The browser displays a normal font style. This is default
     case normal
