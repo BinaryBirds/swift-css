@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  GridRowEnd.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
@@ -30,6 +30,6 @@ func GridRowEnd(_ value: String) -> Property {
 }
 
 /// Specifies where to end the grid item
-func GridRowEnd(_ value: GridRowEndValue) -> Property {
+public func GridRowEnd(_ value: GridRowEndValue) -> Property {
     GridRowEnd(value.rawValue)
 }

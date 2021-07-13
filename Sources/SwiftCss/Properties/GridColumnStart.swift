@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  GridColumnStart.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
@@ -30,6 +30,6 @@ func GridColumnStart(_ value: String) -> Property {
 }
 
 /// Specifies where to start the grid item
-func GridColumnStart(_ value: GridColumnStartValue = .auto) -> Property {
+public func GridColumnStart(_ value: GridColumnStartValue = .auto) -> Property {
     GridColumnStart(value.rawValue)
 }

@@ -27,6 +27,7 @@ final class SwiftCssTests: XCTestCase {
                 }
                 Element(.a) {
                     Color(.orange)
+                    BoxShadow(.px(6), .px(4), blur: .px(2), color: "cafe00")
                 }
                 .pseudo(.hover)
             }

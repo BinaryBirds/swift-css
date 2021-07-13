@@ -28,7 +28,6 @@ public enum FontStretchValue: String {
     case initial
     /// Inherits this property from its parent element.
     case inherit
-
 }
 
 func FontStretch(_ value: String) -> Property {

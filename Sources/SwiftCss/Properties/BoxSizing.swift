@@ -5,7 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-
 public enum BoxSizingValue: String {
     /// Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included
     case contentBox = "content-box"

@@ -21,6 +21,11 @@ public struct CSSColor: ExpressibleByStringLiteral {
         css = value
         /// check if length is valid (000, #000, cafe00, #cafe00)
         assert([3,4,6,7].contains(value.count), "Invalid hex string")
+
+        /// add # prefix if missing
+        if !css.hasPrefix("#") {
+            css = "#" + css
+        }
     }
 
     init(r: Int, g: Int, b: Int, a: Double? = nil) {

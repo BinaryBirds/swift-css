@@ -44,3 +44,5 @@ An awesome Swift CSS DSL library using result builders.
 - [CSS Snapshot 2020](https://www.w3.org/TR/css-2020/) 
 - [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
 - [W3Schools CSS reference](https://www.w3schools.com/cssref/)
+- [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [CSS3](https://www.quackit.com/css/css3/)

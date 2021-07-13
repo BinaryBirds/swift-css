@@ -46,6 +46,6 @@ func GridTemplateColumns(_ value: String) -> Property {
 }
 
 /// Specifies the size of the columns, and how many columns in a grid layout
-func GridTemplateColumns(_ value: GridTemplateColumnsValue = .none) -> Property {
+public func GridTemplateColumns(_ value: GridTemplateColumnsValue = .none) -> Property {
     GridTemplateColumns(value.rawValue)
 }

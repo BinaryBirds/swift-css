@@ -13,7 +13,6 @@ public enum ColumnRuleColorValue {
     /// Inherits this property from its parent element.
     case inherit
 
-    
     var rawValue: String {
         switch self {
         case .color(let value):
