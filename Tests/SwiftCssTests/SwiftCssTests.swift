@@ -19,7 +19,7 @@ final class SwiftCssTests: XCTestCase {
                 }
                 Element(.body) {
                     Margin(horizontal: .auto, vertical: .length(.rem(2)))
-                    BackgroundColor(.black)
+                    Background(.color("cafe00"), image: .url("./test.png"), position: .leftTop)
                     Color(.white)
                 }
                 Element(.a) {
