@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  WordWrap.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //

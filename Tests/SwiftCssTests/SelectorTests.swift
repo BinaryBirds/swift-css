@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  SelectorTests.swift
+//  SwiftCssTests
 //
 //  Created by Tibor Bodecs on 2021. 07. 11..
 //

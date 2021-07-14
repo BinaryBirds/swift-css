@@ -1,12 +1,11 @@
 //
-//  File.swift
-//  
+//  LineBreak.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
 enum LineBreakValue: String {
-    
     case auto
     case loose
     case normal

@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  SelectorBuilder.swift
+//  SwiftCss
 //
 //  Created by Tibor Bodecs on 2021. 07. 09..
 //
