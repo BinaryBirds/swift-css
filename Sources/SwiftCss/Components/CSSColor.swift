@@ -28,7 +28,7 @@ public struct CSSColor: ExpressibleByStringLiteral {
         }
     }
 
-    init(r: Int, g: Int, b: Int, a: Double? = nil) {
+    public init(r: Int, g: Int, b: Int, a: Double? = nil) {
         css = "\(r),\(g),\(b)"
         if let a = a {
             css = "rgba(" + css + ", \(a))"
@@ -38,7 +38,7 @@ public struct CSSColor: ExpressibleByStringLiteral {
         }
     }
 
-    init(r: Double, g: Double, b: Double, a: Double? = nil) {
+    public init(r: Double, g: Double, b: Double, a: Double? = nil) {
         css = "\(r)%,\(g)%,\(b)%"
         if let a = a {
             css = "rgba(" + css + ", \(a))"
@@ -48,7 +48,7 @@ public struct CSSColor: ExpressibleByStringLiteral {
         }
     }
     
-    init(h: Int, s: Int, l: Int, a: Double? = nil) {
+    public init(h: Int, s: Int, l: Int, a: Double? = nil) {
         css = "\(h),\(s),\(l)"
         if let a = a {
             css = "hsla(" + css + ", \(a))"
@@ -58,7 +58,7 @@ public struct CSSColor: ExpressibleByStringLiteral {
         }
     }
 
-    init(h: Double, s: Double, l: Double, a: Double? = nil) {
+    public init(h: Double, s: Double, l: Double, a: Double? = nil) {
         css = "\(h)%,\(s)%,\(l)%"
         if let a = a {
             css = "hsla(" + css + ", \(a))"

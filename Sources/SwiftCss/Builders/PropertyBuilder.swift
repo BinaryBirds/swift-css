@@ -6,7 +6,7 @@
 //
 
 @resultBuilder
-enum PropertyBuilder {
+public enum PropertyBuilder {
     static func buildBlock(_ components: Property...) -> [Property] {
         components
     }

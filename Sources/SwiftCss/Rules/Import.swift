@@ -10,12 +10,15 @@
 /// The @import rule must be at the top of the document (but after any @charset declaration).
 ///
 /// The @import rule also supports media queries, so you can allow the import to be media-dependent.
-struct Import: Rule {
-
+public struct Import: Rule {
     var name: String
     
+    public init(_ name: String) {
+        self.name = name
+    }
+    
     /// @import "mobstyle.css" screen and (max-width: 768px);
-    var css: String {
+    public var css: String {
         "@import " + name + ";"
     }
 }

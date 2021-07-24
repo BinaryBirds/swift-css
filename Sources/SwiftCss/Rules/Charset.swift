@@ -6,11 +6,15 @@
 //
 
 /// Specifies the character encoding to use
-struct Charset: Rule {
+public struct Charset: Rule {
     var name: String
     
+    public init(_ name: String) {
+        self.name = name
+    }
+    
     /// @charset "UTF-8";
-    var css: String {
+    public var css: String {
         #"@charset ""# + name + #"";"#
     }
 }

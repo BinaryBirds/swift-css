@@ -6,7 +6,7 @@
 //
 
 /// https://www.w3schools.com/cssref/css_selectors.asp
-enum Pseudo {
+public enum Pseudo {
     case active
     case after
     case before
@@ -49,45 +49,84 @@ enum Pseudo {
     
     var value: String {
         switch self {
-        case .active:                       return ":active"
-        case .after:                        return "::after"
-        case .before:                       return "::before"
-        case .checked:                      return ":checked"
-        case .`default`:                    return ":default"
-        case .disabled:                     return ":disabled"
-        case .empty:                        return ":empty"
-        case .firstChild:                   return ":first-child"
-        case .firstLetter:                  return "::first-letter"
-        case .firstLine:                    return "::first-line"
-        case .firstOfType:                  return ":first-of-type"
-        case .focus:                        return ":focus"
-        case .fullscreen:                   return ":fullscreen"
-        case .hover:                        return ":hover"
-        case .inRange:                      return ":in-range"
-        case .indeterminate:                return ":indeterminate"
-        case .invalid:                      return ":invalid"
-        case .lang(let value):              return ":lang(\(value)"
-        case .lastChild:                    return ":last-child"
-        case .lastOfType:                   return ":last-of-type"
-        case .link:                         return ":link"
-        case .marker:                       return "::marker"
-        case .not(let value):               return ":not(\(value))"
-        case .nthChild(let value):          return ":nth-child(\(value))"
-        case .nthLastChild(let value):      return ":nth-last-child(\(value))"
-        case .nthLastOfType(let value):     return ":nth-last-of-type(\(value))"
-        case .nthOfType(let value):         return ":nth-of-type(\(value))"
-        case .onlyOfType:                   return ":only-of-type"
-        case .onlyChild:                    return ":only-child"
-        case .`optional`:                   return ":optional"
-        case .outOfRange:                   return ":out-of-range"
-        case .placeholder:                  return ":placeholder"
-        case .readOnly:                     return ":read-only"
-        case .readWrite:                    return ":read-write"
-        case .`required`:                   return ":required"
-        case .selection:                    return "::selection"
-        case .target:                       return ":target"
-        case .valid:                        return ":valid"
-        case .visited:                      return ":visited"
+        case .active:
+            return ":active"
+        case .after:
+            return "::after"
+        case .before:
+            return "::before"
+        case .checked:
+            return ":checked"
+        case .`default`:
+            return ":default"
+        case .disabled:
+            return ":disabled"
+        case .empty:
+            return ":empty"
+        case .firstChild:
+            return ":first-child"
+        case .firstLetter:
+            return "::first-letter"
+        case .firstLine:
+            return "::first-line"
+        case .firstOfType:
+            return ":first-of-type"
+        case .focus:
+            return ":focus"
+        case .fullscreen:
+            return ":fullscreen"
+        case .hover:
+            return ":hover"
+        case .inRange:
+            return ":in-range"
+        case .indeterminate:
+            return ":indeterminate"
+        case .invalid:
+            return ":invalid"
+        case .lang(let value):
+            return ":lang(\(value)"
+        case .lastChild:
+            return ":last-child"
+        case .lastOfType:
+            return ":last-of-type"
+        case .link:
+            return ":link"
+        case .marker:
+            return "::marker"
+        case .not(let value):
+            return ":not(\(value))"
+        case .nthChild(let value):
+            return ":nth-child(\(value))"
+        case .nthLastChild(let value):
+            return ":nth-last-child(\(value))"
+        case .nthLastOfType(let value):
+            return ":nth-last-of-type(\(value))"
+        case .nthOfType(let value):
+            return ":nth-of-type(\(value))"
+        case .onlyOfType:
+            return ":only-of-type"
+        case .onlyChild:
+            return ":only-child"
+        case .`optional`:
+            return ":optional"
+        case .outOfRange:
+            return ":out-of-range"
+        case .placeholder:
+            return ":placeholder"
+        case .readOnly:
+            return ":read-only"
+        case .readWrite:
+            return ":read-write"
+        case .`required`:
+            return ":required"
+        case .selection:
+            return "::selection"
+        case .target:
+            return ":target"
+        case .valid:
+            return ":valid"
+        case .visited:
+            return ":visited"
         }
     }
 }

@@ -5,12 +5,12 @@
 //  Created by Tibor Bodecs on 2021. 07. 09..
 //
 
-struct Media: Rule {
+public struct Media: Rule {
 
     var query: String?
     var selectors: [Selector]
 
-    init(_ query: String? = nil, @SelectorBuilder _ builder: () -> [Selector]) {
+    public init(_ query: String? = nil, @SelectorBuilder _ builder: () -> [Selector]) {
         self.query = query
         self.selectors = builder()
     }
@@ -27,7 +27,7 @@ struct Media: Rule {
 //        static let standalone = Query(rawValue: 1 << 6) // standalone app
 //    }
 
-    var css: String {
+    public var css: String {
         let css = selectors.map(\.css).joined()
         guard let query = query else {
             return css

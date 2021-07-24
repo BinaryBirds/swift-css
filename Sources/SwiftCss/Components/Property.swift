@@ -11,7 +11,13 @@ public struct Property: CSSRepresentable {
     var value: String
     var isImportant: Bool = false
     
-    var css: String {
+    public init(name: String, value: String, isImportant: Bool = false) {
+        self.name = name
+        self.value = value
+        self.isImportant = isImportant
+    }
+    
+    public var css: String {
         "\t" + name + ": " + value + (isImportant ? " !important" : "") + ";\n"
     }
     

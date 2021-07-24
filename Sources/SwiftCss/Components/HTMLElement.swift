@@ -9,7 +9,7 @@
 /// https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 /// https://www.w3schools.com/TAGS/default.ASP
 ///
-enum HTMLElement: String {
+public enum HTMLElement: String {
     /// main root, sectioning root
     case html, body
     /// content sectioning

@@ -6,7 +6,7 @@
 //
 
 @resultBuilder
-enum SelectorBuilder {
+public enum SelectorBuilder {
     static func buildBlock(_ components: Selector...) -> [Selector] {
         components
     }
