@@ -137,6 +137,35 @@ final class SwiftCssTests: XCTestCase {
         print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
+    
+    func testMediaQueries() {
+        @RuleBuilder func buildCSS() -> [Rule] {
+            Media {
+                Root {
+                    Background(.color(.red))
+                }
+            }
+            Media(.xs) {
+                Root {
+                    Background(.color(.blue))
+                }
+            }
+            Media(.dark) {
+                Root {
+                    Background(.color(.green))
+                }
+            }
+            Media(.standalone) {
+                Body {
+                    Background(.color(.yellow))
+                }
+            }
+        }
+
+        let sel = buildCSS()
+        print(sel.map(\.css).joined(separator: "\n"))
+        XCTAssertTrue(true)
+    }
 }
 
 
