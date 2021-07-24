@@ -17,6 +17,10 @@ public func Element(_ name: HTMLElement, @PropertyBuilder _ builder: () -> [Prop
     Selector(name.rawValue, builder)
 }
 
+public func Elements(_ names: [HTMLElement], @PropertyBuilder _ builder: () -> [Property]) -> Selector {
+    Selector(names.map(\.rawValue).joined(separator: ","), builder)
+}
+
 public func Id(_ name: String, @PropertyBuilder _ builder: () -> [Property]) -> Selector {
     Selector("#" + name, builder)
 }

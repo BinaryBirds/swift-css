@@ -78,15 +78,39 @@ public enum Unit {
     }
 }
 
-//
-//extension Int {
-//    var px: Unit {
-//        Unit.px(Double(self))
-//    }
-//}
-//
-//extension Double {
-//    var px: Unit {
-//        Unit.px(self)
-//    }
-//}
+
+public extension Int {
+    var cm: Unit { Unit.cm(Double(self)) }
+    var mm: Unit { Unit.mm(Double(self)) }
+    var `in`: Unit { Unit.in(Double(self)) }
+    var px: Unit { Unit.px(Double(self)) }
+    var pt: Unit { Unit.pt(Double(self)) }
+    var pc: Unit { Unit.pc(Double(self)) }
+    var em: Unit { Unit.em(Double(self)) }
+    var ex: Unit { Unit.ex(Double(self)) }
+    var ch: Unit { Unit.ch(Double(self)) }
+    var rem: Unit { Unit.rem(Double(self)) }
+    var vw: Unit { Unit.vw(Double(self)) }
+    var vh: Unit { Unit.vh(Double(self)) }
+    var vmin: Unit { Unit.vmin(Double(self)) }
+    var vmax: Unit { Unit.vmax(Double(self)) }
+    var percent: Unit { Unit.percent(Double(self)) }
+}
+
+public extension Double {
+    var cm: Unit { Unit.cm(self) }
+    var mm: Unit { Unit.mm(self) }
+    var `in`: Unit { Unit.in(self) }
+    var px: Unit { Unit.px(self) }
+    var pt: Unit { Unit.pt(self) }
+    var pc: Unit { Unit.pc(self) }
+    var em: Unit { Unit.em(self) }
+    var ex: Unit { Unit.ex(self) }
+    var ch: Unit { Unit.ch(self) }
+    var rem: Unit { Unit.rem(self) }
+    var vw: Unit { Unit.vw(self) }
+    var vh: Unit { Unit.vh(self) }
+    var vmin: Unit { Unit.vmin(self) }
+    var vmax: Unit { Unit.vmax(self) }
+    var percent: Unit { Unit.percent(self) }
+}
