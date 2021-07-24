@@ -25,7 +25,7 @@ public enum TextDecorationColorValue {
     }
 }
 
-func TextDecorationColor(_ value: String) -> Property {
+public func TextDecorationColor(_ value: String) -> Property {
     Property(name: "text-decoration-color", value: value)
 }
 

@@ -34,7 +34,7 @@ public enum AnimationNameValue: ExpressibleByStringLiteral {
     }
 }
 
-func AnimationName(_ value: String) -> Property {
+public func AnimationName(_ value: String) -> Property {
     Property(name: "animation-name", value: value)
 }
 

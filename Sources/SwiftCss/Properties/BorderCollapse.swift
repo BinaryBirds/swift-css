@@ -16,7 +16,7 @@ public enum BorderCollapseValue: String {
     case inherit
 }
 
-func BorderCollapse(_ value: String) -> Property {
+public func BorderCollapse(_ value: String) -> Property {
     Property(name: "border-collapse", value: value)
 }
 

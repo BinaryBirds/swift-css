@@ -34,7 +34,7 @@ public enum ColumnCountValue: ExpressibleByIntegerLiteral {
     }
 }
 
-func ColumnCount(_ value: String) -> Property {
+public func ColumnCount(_ value: String) -> Property {
     Property(name: "column-count", value: value)
 }
 

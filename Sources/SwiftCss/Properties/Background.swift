@@ -41,7 +41,7 @@ public enum BackgroundValue {
     }
 }
 
-func Background(_ value: String) -> Property {
+public func Background(_ value: String) -> Property {
     Property(name: "background", value: value)
 }
 

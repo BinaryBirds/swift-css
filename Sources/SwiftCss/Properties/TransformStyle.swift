@@ -16,7 +16,7 @@ public enum TransformStyleValue: String {
     case inherit
 }
 
-func TransformStyle(_ value: String) -> Property {
+public func TransformStyle(_ value: String) -> Property {
     Property(name: "transform-style", value: value)
 }
 

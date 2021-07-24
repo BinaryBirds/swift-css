@@ -32,7 +32,7 @@ public enum FlexValue {
     }
 }
 
-func Flex(_ value: String) -> Property {
+public func Flex(_ value: String) -> Property {
     Property(name: "flex", value: value)
 }
 

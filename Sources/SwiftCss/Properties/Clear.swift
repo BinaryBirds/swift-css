@@ -20,7 +20,7 @@ public enum ClearValue: String {
     case inherit
 }
 
-func Clear(_ value: String) -> Property {
+public func Clear(_ value: String) -> Property {
     Property(name: "clear", value: value)
 }
 

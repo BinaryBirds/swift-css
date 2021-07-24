@@ -33,7 +33,7 @@ public enum CounterIncrementValue {
     }
 }
 
-func CounterIncrement(_ value: String) -> Property {
+public func CounterIncrement(_ value: String) -> Property {
     Property(name: "counter-increment", value: value)
 }
 

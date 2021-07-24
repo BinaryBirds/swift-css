@@ -21,7 +21,7 @@ public enum GridRowStartValue {
     }
 }
 
-func GridRowStart(_ value: String) -> Property {
+public func GridRowStart(_ value: String) -> Property {
     Property(name: "grid-row-start", value: value)
 }
 

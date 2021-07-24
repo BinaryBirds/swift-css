@@ -34,11 +34,11 @@ public enum GridTemplateValue {
     }
 }
 
-func GridTemplate(_ value: String) -> Property {
+public func GridTemplate(_ value: String) -> Property {
     Property(name: "grid-template", value: value)
 }
 
 /// A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties
-func GridTemplate(_ value: GridTemplateValue = .none) -> Property {
+public func GridTemplate(_ value: GridTemplateValue = .none) -> Property {
     GridTemplate(value.rawValue)
 }

@@ -112,7 +112,7 @@ public enum FilterValue {
     }
 }
 
-func Filter(_ value: String) -> Property {
+public func Filter(_ value: String) -> Property {
     Property(name: "filter", value: value)
 }
 

@@ -24,7 +24,7 @@ public enum JustifyContentValue: String {
     case inherit
 }
 
-func JustifyContent(_ value: String) -> Property {
+public func JustifyContent(_ value: String) -> Property {
     Property(name: "justify-content", value: value)
 }
 

@@ -29,7 +29,7 @@ public enum LetterSpacingValue {
     }
 }
 
-func LetterSpacing(_ value: String) -> Property {
+public func LetterSpacing(_ value: String) -> Property {
     Property(name: "letter-spacing", value: value)
 }
 

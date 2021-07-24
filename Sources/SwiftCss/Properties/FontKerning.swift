@@ -14,7 +14,7 @@ public enum FontKerningValue: String {
     case none
 }
 
-func FontKerning(_ value: String) -> Property {
+public func FontKerning(_ value: String) -> Property {
     Property(name: "font-kerning", value: value)
 }
 

@@ -26,7 +26,7 @@ public enum TextAlignLastValue: String {
     case inherit
 }
 
-func TextAlignLast(_ value: String) -> Property {
+public func TextAlignLast(_ value: String) -> Property {
     Property(name: "text-align-last", value: value)
 }
 

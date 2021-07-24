@@ -18,7 +18,7 @@ public enum FloatValue: String {
     case inherit
 }
 
-func Float(_ value: String) -> Property {
+public func Float(_ value: String) -> Property {
     Property(name: "float", value: value)
 }
 

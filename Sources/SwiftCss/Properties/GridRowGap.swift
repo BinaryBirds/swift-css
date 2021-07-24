@@ -18,7 +18,7 @@ public enum GridRowGapValue {
 }
 
 /// Specifies the size of the gap between rows
-func GridRowGap(_ value: String) -> Property {
+public func GridRowGap(_ value: String) -> Property {
     Property(name: "grid-row-gap", value: value)
 }
 

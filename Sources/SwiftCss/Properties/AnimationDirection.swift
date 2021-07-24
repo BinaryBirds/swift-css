@@ -20,7 +20,7 @@ public enum AnimationDirectionValue: String {
     case inherit
 }
 
-func AnimationDirection(_ value: String) -> Property {
+public func AnimationDirection(_ value: String) -> Property {
     Property(name: "animation-direction", value: value)
 }
 

@@ -29,7 +29,7 @@ public enum BorderImageOutsetValue {
     }
 }
 
-func BorderImageOutset(_ value: String) -> Property {
+public func BorderImageOutset(_ value: String) -> Property {
     Property(name: "border-image-outset", value: value)
 }
 

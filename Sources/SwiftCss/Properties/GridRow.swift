@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func GridRow(_ value: String) -> Property {
+public func GridRow(_ value: String) -> Property {
     Property(name: "grid-row", value: value)
 }
 

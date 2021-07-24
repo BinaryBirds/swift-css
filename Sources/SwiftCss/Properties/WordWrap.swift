@@ -16,7 +16,7 @@ public enum WordWrapValue: String {
     case inherit
 }
 
-func WordWrap(_ value: String) -> Property {
+public func WordWrap(_ value: String) -> Property {
     Property(name: "word-wrap", value: value)
 }
 

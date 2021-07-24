@@ -31,7 +31,7 @@ public enum FontWeightValue: String {
     case inherit
 }
 
-func FontWeight(_ value: String) -> Property {
+public func FontWeight(_ value: String) -> Property {
     Property(name: "font-weight", value: value)
 }
 

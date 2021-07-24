@@ -22,7 +22,7 @@ public enum ObjectFitValue: String {
     case inherit
 }
 
-func ObjectFit(_ value: String) -> Property {
+public func ObjectFit(_ value: String) -> Property {
     Property(name: "object-fit", value: value)
 }
 

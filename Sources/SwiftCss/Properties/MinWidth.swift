@@ -25,7 +25,7 @@ public enum MinWidthValue {
     }
 }
 
-func MinWidth(_ value: String) -> Property {
+public func MinWidth(_ value: String) -> Property {
     Property(name: "min-width", value: value)
 }
 

@@ -25,7 +25,7 @@ public enum ColorValue {
     }
 }
 
-func Color(_ value: String) -> Property {
+public func Color(_ value: String) -> Property {
     Property(name: "color", value: value)
 }
 

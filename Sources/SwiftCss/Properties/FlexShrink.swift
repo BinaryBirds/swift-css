@@ -26,7 +26,7 @@ public enum FlexShrinkValue {
     }
 }
 
-func FlexShrink(_ value: String) -> Property {
+public func FlexShrink(_ value: String) -> Property {
     Property(name: "flex-shrink", value: value)
 }
 

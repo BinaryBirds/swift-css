@@ -16,7 +16,7 @@ public enum UserSelectValue: String {
     case all
 }
 
-func UserSelect(_ value: String) -> Property {
+public func UserSelect(_ value: String) -> Property {
     Property(name: "user-select", value: value)
 }
 

@@ -25,7 +25,7 @@ public enum MinHeightValue {
     }
 }
 
-func MinHeight(_ value: String) -> Property {
+public func MinHeight(_ value: String) -> Property {
     Property(name: "min-height", value: value)
 }
 

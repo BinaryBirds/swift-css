@@ -28,7 +28,7 @@ public enum TopValue {
         }
     }
 }
-func Top(_ value: String) -> Property {
+public func Top(_ value: String) -> Property {
     Property(name: "top", value: value)
 }
 

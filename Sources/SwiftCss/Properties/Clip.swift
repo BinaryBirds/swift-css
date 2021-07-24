@@ -29,7 +29,7 @@ public enum ClipValue {
     }
 }
 
-func Clip(_ value: String) -> Property {
+public func Clip(_ value: String) -> Property {
     Property(name: "clip", value: value)
 }
 

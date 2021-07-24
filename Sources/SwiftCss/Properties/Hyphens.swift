@@ -18,7 +18,7 @@ public enum HyphensValue: String {
     case inherit
 }
 
-func Hyphens(_ value: String) -> Property {
+public func Hyphens(_ value: String) -> Property {
     Property(name: "hyphens", value: value)
 }
 

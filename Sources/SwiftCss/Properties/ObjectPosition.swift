@@ -30,7 +30,7 @@ public enum ObjectPositionValue {
     }
 }
 
-func ObjectPosition(_ value: String) -> Property {
+public func ObjectPosition(_ value: String) -> Property {
     Property(name: "object-position", value: value)
 }
 

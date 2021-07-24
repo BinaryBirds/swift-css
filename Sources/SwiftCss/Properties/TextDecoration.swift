@@ -28,7 +28,7 @@ public enum TextDecorationValue {
     
 }
 
-func TextDecoration(_ value: String) -> Property {
+public func TextDecoration(_ value: String) -> Property {
     Property(name: "text-decoration", value: value)
 }
 

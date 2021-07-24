@@ -34,7 +34,7 @@ public enum BackgroundImageValue {
     }
 }
 
-func BackgroundImage(_ value: String) -> Property {
+public func BackgroundImage(_ value: String) -> Property {
     Property(name: "background-image", value: value)
 }
 

@@ -15,7 +15,7 @@ public enum WritingModeValue: String {
 }
 
 
-func WritingMode(_ value: String) -> Property {
+public func WritingMode(_ value: String) -> Property {
     Property(name: "writing-mode", value: value)
 }
 

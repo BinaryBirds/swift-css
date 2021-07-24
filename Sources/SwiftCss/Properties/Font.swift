@@ -59,7 +59,7 @@ public enum FontValue {
     }
 }
 
-func Font(_ value: String) -> Property {
+public func Font(_ value: String) -> Property {
     Property(name: "font", value: value)
 }
 

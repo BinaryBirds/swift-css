@@ -16,7 +16,7 @@ public enum BackfaceVisibilityValue: String {
     case inherit
 }
 
-func BackfaceVisibility(_ value: String) -> Property {
+public func BackfaceVisibility(_ value: String) -> Property {
     Property(name: "backface-visibility", value: value)
 }
 

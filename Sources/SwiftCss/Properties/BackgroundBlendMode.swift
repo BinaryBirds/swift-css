@@ -28,7 +28,7 @@ public enum BackgroundBlendModeValue: String {
     case luminosity
 }
 
-func BackgroundBlendMode(_ value: String) -> Property {
+public func BackgroundBlendMode(_ value: String) -> Property {
     Property(name: "background-blend-mode", value: value)
 }
 

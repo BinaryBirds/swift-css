@@ -37,7 +37,7 @@ public enum ColumnRuleWidthValue {
     }
 }
 
-func ColumnRuleWidth(_ value: String) -> Property {
+public func ColumnRuleWidth(_ value: String) -> Property {
     Property(name: "column-rule-width", value: value)
 }
 

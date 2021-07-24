@@ -21,7 +21,7 @@ public enum FontFeatureSettingsValue {
     }
 }
 
-func FontFeatureSettings(_ value: String) -> Property {
+public func FontFeatureSettings(_ value: String) -> Property {
     Property(name: "font-feature-settings", value: value)
 }
 

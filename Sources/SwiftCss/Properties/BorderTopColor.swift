@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BorderTopColor(_ value: String) -> Property {
+public func BorderTopColor(_ value: String) -> Property {
     Property(name: "border-top-color", value: value)
 }
 

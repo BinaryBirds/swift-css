@@ -29,7 +29,7 @@ public enum MaxHeightValue {
     }
 }
 
-func MaxHeight(_ value: String) -> Property {
+public func MaxHeight(_ value: String) -> Property {
     Property(name: "max-height", value: value)
 }
 

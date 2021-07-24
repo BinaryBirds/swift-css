@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BorderWidth(_ value: String) -> Property {
+public func BorderWidth(_ value: String) -> Property {
     Property(name: "border-width", value: value)
 }
 

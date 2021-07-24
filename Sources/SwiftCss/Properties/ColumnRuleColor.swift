@@ -25,7 +25,7 @@ public enum ColumnRuleColorValue {
     }
 }
 
-func ColumnRuleColor(_ value: String) -> Property {
+public func ColumnRuleColor(_ value: String) -> Property {
     Property(name: "column-rule-color", value: value)
 }
 

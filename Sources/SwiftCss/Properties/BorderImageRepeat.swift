@@ -20,7 +20,7 @@ public enum BorderImageRepeatValue: String {
     case inherit
 }
 
-func BorderImageRepeat(_ value: String) -> Property {
+public func BorderImageRepeat(_ value: String) -> Property {
     Property(name: "border-image-repeat", value: value)
 }
 

@@ -25,7 +25,7 @@ public enum PositionValue: String {
     case inherit
 }
 
-func Position(_ value: String) -> Property {
+public func Position(_ value: String) -> Property {
     Property(name: "position", value: value)
 }
 

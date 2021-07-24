@@ -18,7 +18,7 @@ public enum ColumnFillValue: String {
     case inherit
 }
 
-func ColumnFill(_ value: String) -> Property {
+public func ColumnFill(_ value: String) -> Property {
     Property(name: "column-fill", value: value)
 }
 

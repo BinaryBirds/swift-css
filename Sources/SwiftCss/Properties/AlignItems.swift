@@ -22,7 +22,7 @@ public enum AlignItemsValue: String {
     case inherit
 }
 
-func AlignItems(_ value: String) -> Property {
+public func AlignItems(_ value: String) -> Property {
     Property(name: "align-items", value: value)
 }
 

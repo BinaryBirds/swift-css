@@ -87,7 +87,7 @@ public enum CursorValue: String {
     case inherit
 }
 
-func Cursor(_ value: String) -> Property {
+public func Cursor(_ value: String) -> Property {
     Property(name: "cursor", value: value)
 }
 

@@ -6,7 +6,7 @@
 //
 
 /// Sets the left margin of an element
-func MarginLeft(_ value: String) -> Property {
+public func MarginLeft(_ value: String) -> Property {
     Property(name: "margin-left", value: value)
 }
 

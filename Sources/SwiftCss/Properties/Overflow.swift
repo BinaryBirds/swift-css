@@ -20,7 +20,7 @@ public enum OverflowValue: String {
     case inherit
 }
 
-func Overflow(_ value: String) -> Property {
+public func Overflow(_ value: String) -> Property {
     Property(name: "overflow", value: value)
 }
 

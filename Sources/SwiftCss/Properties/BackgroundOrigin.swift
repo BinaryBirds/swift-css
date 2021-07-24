@@ -18,7 +18,7 @@ public enum BackgroundOriginValue: String {
     case inherit
 }
 
-func BackgroundOrigin(_ value: String) -> Property {
+public func BackgroundOrigin(_ value: String) -> Property {
     Property(name: "background-origin", value: value)
 }
 

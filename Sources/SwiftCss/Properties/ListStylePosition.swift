@@ -16,7 +16,7 @@ public enum ListStylePositionValue: String {
     case inherit
 }
 
-func ListStylePosition(_ value: String) -> Property {
+public func ListStylePosition(_ value: String) -> Property {
     Property(name: "list-style-position", value: value)
 }
 

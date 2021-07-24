@@ -18,7 +18,7 @@ public enum GridAutoFlowValue: String {
     case columnDense = "column dense"
 }
 
-func GridAutoFlow(_ value: String) -> Property {
+public func GridAutoFlow(_ value: String) -> Property {
     Property(name: "grid-auto-flow", value: value)
 }
 

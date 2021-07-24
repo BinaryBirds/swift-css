@@ -16,7 +16,7 @@ public enum TextOrientationValue: String {
     case unset
 }
 
-func TextOrientation(_ value: String) -> Property {
+public func TextOrientation(_ value: String) -> Property {
     Property(name: "text-orientation", value: value)
 }
 

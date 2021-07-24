@@ -25,7 +25,7 @@ public enum TextIndentValue {
     }
 }
 
-func TextIndent(_ value: String) -> Property {
+public func TextIndent(_ value: String) -> Property {
     Property(name: "text-indent", value: value)
 }
 

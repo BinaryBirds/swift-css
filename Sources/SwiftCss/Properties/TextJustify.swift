@@ -20,11 +20,11 @@ public enum TextJustifyValue: String {
     case inherit
 }
 
-func TextJustify(_ value: String) -> Property {
+public func TextJustify(_ value: String) -> Property {
     Property(name: "text-justify", value: value)
 }
 
 /// Specifies the justification method used when text-align is "justify"
-func TextJustify(_ value: TextJustifyValue = .auto) -> Property {
+public func TextJustify(_ value: TextJustifyValue = .auto) -> Property {
     TextJustify(value.rawValue)
 }

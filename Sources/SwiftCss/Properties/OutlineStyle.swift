@@ -32,7 +32,7 @@ public enum OutlineStyleValue: String {
     case inherit
 }
 
-func OutlineStyle(_ value: String) -> Property {
+public func OutlineStyle(_ value: String) -> Property {
     Property(name: "outline-style", value: value)
 }
 

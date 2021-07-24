@@ -32,7 +32,7 @@ public enum ColumnRuleStyleValue: String {
     case inherit
 }
 
-func ColumnRuleStyle(_ value: String) -> Property {
+public func ColumnRuleStyle(_ value: String) -> Property {
     Property(name: "column-rule-style", value: value)
 }
 

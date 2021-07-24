@@ -16,7 +16,7 @@ public enum PointerEventsValue: String {
     case inherit
 }
 
-func PointerEvents(_ value: String) -> Property {
+public func PointerEvents(_ value: String) -> Property {
     Property(name: "pointer-events", value: value)
 }
 

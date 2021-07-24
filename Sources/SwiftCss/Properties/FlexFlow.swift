@@ -24,7 +24,7 @@ public enum FlexFlowValue {
     }
 }
 
-func FlexFlow(_ value: String) -> Property {
+public func FlexFlow(_ value: String) -> Property {
     Property(name: "flex-flow", value: value)
 }
 

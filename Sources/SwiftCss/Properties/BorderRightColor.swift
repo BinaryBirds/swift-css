@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BorderRightColor(_ value: String) -> Property {
+public func BorderRightColor(_ value: String) -> Property {
     Property(name: "border-right-color", value: value)
 }
 

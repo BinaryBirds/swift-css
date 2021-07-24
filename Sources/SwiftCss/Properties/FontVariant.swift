@@ -16,7 +16,7 @@ public enum FontVariantValue: String {
     case inherit
 }
 
-func FontVariant(_ value: String) -> Property {
+public func FontVariant(_ value: String) -> Property {
     Property(name: "font-variant", value: value)
 }
 

@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BorderLeftStyle(_ value: String) -> Property {
+public func BorderLeftStyle(_ value: String) -> Property {
     Property(name: "border-left-style", value: value)
 }
 

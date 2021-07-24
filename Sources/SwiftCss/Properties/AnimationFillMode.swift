@@ -20,7 +20,7 @@ public enum AnimationFillModeValue: String {
     case inherit
 }
 
-func AnimationFillMode(_ value: String) -> Property {
+public func AnimationFillMode(_ value: String) -> Property {
     Property(name: "animation-fill-mode", value: value)
 }
 

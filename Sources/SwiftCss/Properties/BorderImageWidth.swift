@@ -34,7 +34,7 @@ public enum BorderImageWidthValue {
     }
 }
 
-func BorderImageWidth(_ value: String) -> Property {
+public func BorderImageWidth(_ value: String) -> Property {
     Property(name: "border-image-width", value: value)
 }
 

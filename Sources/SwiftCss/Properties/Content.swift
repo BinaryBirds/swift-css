@@ -59,7 +59,7 @@ public enum ContentValue {
     }
 }
 
-func Content(_ value: String) -> Property {
+public func Content(_ value: String) -> Property {
     Property(name: "content", value: value)
 }
 

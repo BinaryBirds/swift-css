@@ -29,7 +29,7 @@ public enum WidthValue {
     }
 }
 
-func Width(_ value: String) -> Property {
+public func Width(_ value: String) -> Property {
     Property(name: "width", value: value)
 }
 

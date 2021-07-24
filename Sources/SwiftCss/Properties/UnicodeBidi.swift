@@ -23,7 +23,7 @@ public enum UnicodeBidiValue: String {
 }
 
 
-func UnicodeBidi(_ value: String) -> Property {
+public func UnicodeBidi(_ value: String) -> Property {
     Property(name: "unicode-bidi", value: value)
 }
 

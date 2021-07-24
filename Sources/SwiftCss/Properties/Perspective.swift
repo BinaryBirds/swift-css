@@ -30,7 +30,7 @@ public enum PerspectiveValue {
     }
 }
 
-func Perspective(_ value: String) -> Property {
+public func Perspective(_ value: String) -> Property {
     Property(name: "perspective", value: value)
 }
 

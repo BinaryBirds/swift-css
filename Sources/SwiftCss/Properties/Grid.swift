@@ -38,7 +38,7 @@ public enum GridValue {
     }
 }
 
-func Grid(_ value: String) -> Property {
+public func Grid(_ value: String) -> Property {
     Property(name: "grid", value: value)
 }
 

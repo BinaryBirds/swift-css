@@ -22,7 +22,7 @@ public enum WhiteSpaceValue: String {
     case inherit
 }
 
-func WhiteSpace(_ value: String) -> Property {
+public func WhiteSpace(_ value: String) -> Property {
     Property(name: "white-space", value: value)
 }
 

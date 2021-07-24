@@ -17,7 +17,7 @@ public enum GridColumnGapValue {
     }
 }
 
-func GridColumnGap(_ value: String) -> Property {
+public func GridColumnGap(_ value: String) -> Property {
     Property(name: "grid-column-gap", value: value)
 }
 

@@ -104,6 +104,6 @@ public enum BorderRadiusSingleValue {
 }
 
 /// A shorthand property for border-width, border-style and border-color
-func Border(_ value: String) -> Property {
+public func Border(_ value: String) -> Property {
     Property(name: "border", value: value)
 }

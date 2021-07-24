@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func GridColumn(_ value: String) -> Property {
+public func GridColumn(_ value: String) -> Property {
     Property(name: "grid-column", value: value)
 }
 

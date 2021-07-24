@@ -29,7 +29,7 @@ public enum TabSizeValue {
     }
 }
 
-func TabSize(_ value: String) -> Property {
+public func TabSize(_ value: String) -> Property {
     Property(name: "tab-size", value: value)
 }
 

@@ -18,7 +18,7 @@ public enum TextOverflowValue: String {
     case inherit
 }
 
-func TextOverflow(_ value: String) -> Property {
+public func TextOverflow(_ value: String) -> Property {
     Property(name: "text-overflow", value: value)
 }
 

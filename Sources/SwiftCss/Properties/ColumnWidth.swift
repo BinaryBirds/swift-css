@@ -29,7 +29,7 @@ public enum ColumnWidthValue {
      }
 }
 
-func ColumnWidth(_ value: String) -> Property {
+public func ColumnWidth(_ value: String) -> Property {
     Property(name: "column-width", value: value)
 }
 

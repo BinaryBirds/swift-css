@@ -25,7 +25,7 @@ public enum OutlineOffsetValue {
     }
 }
 
-func OutlineOffset(_ value: String) -> Property {
+public func OutlineOffset(_ value: String) -> Property {
     Property(name: "outline-offset", value: value)
 }
 

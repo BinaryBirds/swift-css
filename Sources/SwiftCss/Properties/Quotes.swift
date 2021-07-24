@@ -46,7 +46,7 @@ public enum QuotesValue {
     }
 }
 
-func Quotes(_ value: String) -> Property {
+public func Quotes(_ value: String) -> Property {
     Property(name: "quotes", value: value)
 }
 

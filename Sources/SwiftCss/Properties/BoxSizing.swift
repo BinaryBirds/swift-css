@@ -16,7 +16,7 @@ public enum BoxSizingValue: String {
     case inherit
 }
 
-func BoxSizing(_ value: String) -> Property {
+public func BoxSizing(_ value: String) -> Property {
     Property(name: "box-sizing", value: value)
 }
 

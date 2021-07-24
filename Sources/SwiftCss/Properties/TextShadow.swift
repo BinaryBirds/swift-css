@@ -32,7 +32,7 @@ public enum TextShadowValue {
     }
 }
 
-func TextShadow(_ value: String) -> Property {
+public func TextShadow(_ value: String) -> Property {
     Property(name: "text-shadow", value: value)
 }
 

@@ -104,6 +104,24 @@ final class SwiftCssTests: XCTestCase {
         print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
+    
+    func testVariable() {
+        @RuleBuilder func buildCSS() -> [Rule] {
+            Media {
+                Root {
+                    Var("size", "400px")
+                }
+                
+                Selector(".container") {
+                    Width("var(--size)")
+                }
+            }
+        }
+
+        let sel = buildCSS()
+        print(sel.map(\.css).joined(separator: "\n"))
+        XCTAssertTrue(true)
+    }
 }
 
 

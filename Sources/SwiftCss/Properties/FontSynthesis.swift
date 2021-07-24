@@ -16,7 +16,7 @@ public enum FontSynthesisValue: String {
     case unset
 }
 
-func FontSynthesis(_ value: String) -> Property {
+public func FontSynthesis(_ value: String) -> Property {
     Property(name: "font-synthesis", value: value)
 }
 

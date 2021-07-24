@@ -20,7 +20,7 @@ public enum FlexDirectionValue: String {
     case inherit
 }
 
-func FlexDirection(_ value: String) -> Property {
+public func FlexDirection(_ value: String) -> Property {
     Property(name: "flex-direction", value: value)
 }
 

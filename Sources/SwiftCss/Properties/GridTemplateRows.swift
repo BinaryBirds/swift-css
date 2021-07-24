@@ -33,7 +33,7 @@ public enum GridTemplateRowsValue {
     }
 }
 
-func GridTemplateRows(_ value: String) -> Property {
+public func GridTemplateRows(_ value: String) -> Property {
     Property(name: "grid-template-rows", value: value)
 }
 

@@ -23,7 +23,7 @@ public enum HangingPunctuationValue: String {
     
 }
 
-func HangingPunctuation(_ value: String) -> Property {
+public func HangingPunctuation(_ value: String) -> Property {
     Property(name: "hanging-punctuation", value: value)
 }
 

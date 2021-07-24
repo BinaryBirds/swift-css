@@ -61,7 +61,7 @@ public enum FontSizeValue {
     }
 }
 
-func FontSize(_ value: String) -> Property {
+public func FontSize(_ value: String) -> Property {
     Property(name: "font-size", value: value)
 }
 

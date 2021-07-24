@@ -30,7 +30,7 @@ public enum BorderRadiusValue {
     }
 }
 
-func BorderRadius(_ value: String) -> Property {
+public func BorderRadius(_ value: String) -> Property {
     Property(name: "border-radius", value: value)
 }
 

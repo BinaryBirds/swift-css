@@ -16,7 +16,7 @@ public enum DirectionValue: String {
     case inherit
 }
 
-func Direction(_ value: String) -> Property {
+public func Direction(_ value: String) -> Property {
     Property(name: "direction", value: value)
 }
 

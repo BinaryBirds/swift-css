@@ -6,7 +6,7 @@
 //
 
 /// Sets the top margin of an element
-func MarginTop(_ value: String) -> Property {
+public func MarginTop(_ value: String) -> Property {
     Property(name: "margin-top", value: value)
 }
 

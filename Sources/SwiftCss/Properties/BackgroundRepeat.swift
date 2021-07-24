@@ -24,7 +24,7 @@ public enum BackgroundRepeatValue: String {
     case inherit
 }
 
-func BackgroundRepeat(_ value: String) -> Property {
+public func BackgroundRepeat(_ value: String) -> Property {
     Property(name: "background-repeat", value: value)
 }
 

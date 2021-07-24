@@ -31,6 +31,6 @@ public enum GridAutoRowsValue {
 
 
 /// Specifies a default row size
-func GridAutoRows(_ value: String) -> Property {
+public func GridAutoRows(_ value: String) -> Property {
     Property(name: "grid-auto-rows", value: value)
 }

@@ -27,7 +27,7 @@ public enum ListStyleValue {
     }
 }
 
-func ListStyle(_ value: String) -> Property {
+public func ListStyle(_ value: String) -> Property {
     Property(name: "list-style", value: value)
 }
 

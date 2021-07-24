@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func PaddingBottom(_ value: String) -> Property {
+public func PaddingBottom(_ value: String) -> Property {
     Property(name: "padding-bottom", value: value)
 }
 

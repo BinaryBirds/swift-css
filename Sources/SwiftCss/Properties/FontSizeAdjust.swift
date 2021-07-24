@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-enum FontSizeAdjustValue {
+public enum FontSizeAdjustValue {
     /// Defines the aspect value to use
     case number(Double)
     /// Default value. No font size adjustment
@@ -29,11 +29,11 @@ enum FontSizeAdjustValue {
     }
 }
 
-func FontSizeAdjust(_ value: String) -> Property {
+public func FontSizeAdjust(_ value: String) -> Property {
     Property(name: "font-size-adjust", value: value)
 }
 
 /// Preserves the readability of text when font fallback occurs
-func FontSizeAdjust(_ value: FontSizeAdjustValue = .none) -> Property {
+public func FontSizeAdjust(_ value: FontSizeAdjustValue = .none) -> Property {
     FontSizeAdjust(value.rawValue)
 }

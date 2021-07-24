@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BorderTopRightRadius(_ value: String) -> Property {
+public func BorderTopRightRadius(_ value: String) -> Property {
     Property(name: "border-top-right-radius", value: value)
 }
 

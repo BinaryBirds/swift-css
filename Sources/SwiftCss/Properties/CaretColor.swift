@@ -29,7 +29,7 @@ public enum CaretColorValue {
     }
 }
 
-func CaretColor(_ value: String) -> Property {
+public func CaretColor(_ value: String) -> Property {
     Property(name: "caret-color", value: value)
 }
 

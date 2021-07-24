@@ -29,7 +29,7 @@ public enum ListStyleImageValue {
     }
 }
 
-func ListStyleImage(_ value: String) -> Property {
+public func ListStyleImage(_ value: String) -> Property {
     Property(name: "list-style-image", value: value)
 }
 

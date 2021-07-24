@@ -31,7 +31,7 @@ public enum CounterResetValue {
     }
 }
 
-func CounterReset(_ value: String) -> Property {
+public func CounterReset(_ value: String) -> Property {
     Property(name: "counter-reset", value: value)
 }
 

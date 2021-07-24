@@ -33,7 +33,7 @@ public enum GridAutoColumnsValue {
     }
 }
 
-func GridAutoColumns(_ value: String) -> Property {
+public func GridAutoColumns(_ value: String) -> Property {
     Property(name: "grid-auto-columns", value: value)
 }
 

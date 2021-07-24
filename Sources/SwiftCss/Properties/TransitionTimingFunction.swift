@@ -67,7 +67,7 @@ public enum TransitionTimingFunctionValue {
     }
 }
 
-func TransitionTimingFunction(_ value: String) -> Property {
+public func TransitionTimingFunction(_ value: String) -> Property {
     Property(name: "transition-timing-function", value: value)
 }
 

@@ -22,7 +22,7 @@ public enum BreakInsideValue: String {
     case inherit
 }
 
-func BreakInside(_ value: String) -> Property {
+public func BreakInside(_ value: String) -> Property {
     Property(name: "break-inside", value: value)
 }
 

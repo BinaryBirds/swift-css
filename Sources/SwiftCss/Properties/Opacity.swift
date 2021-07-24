@@ -25,7 +25,7 @@ public enum OpacityValue {
     }
 }
 
-func Opacity(_ value: String) -> Property {
+public func Opacity(_ value: String) -> Property {
     Property(name: "opacity", value: value)
 }
 

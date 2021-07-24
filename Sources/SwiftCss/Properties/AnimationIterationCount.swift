@@ -34,7 +34,7 @@ public enum AnimationIterationCountValue: ExpressibleByIntegerLiteral {
     }
 }
 
-func AnimationIterationCount(_ value: String) -> Property {
+public func AnimationIterationCount(_ value: String) -> Property {
     Property(name: "animation-iteration-count", value: value)
 }
 

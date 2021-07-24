@@ -64,7 +64,7 @@ public enum AnimationTimingFunctionValue {
     }
 }
 
-func AnimationTimingFunction(_ value: String) -> Property {
+public func AnimationTimingFunction(_ value: String) -> Property {
     Property(name: "animation-timing-function", value: value)
 }
 

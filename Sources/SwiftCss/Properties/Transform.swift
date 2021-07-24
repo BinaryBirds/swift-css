@@ -109,7 +109,7 @@ public enum TransformValue {
     }
 }
 
-func Transform(_ value: String) -> Property {
+public func Transform(_ value: String) -> Property {
     Property(name: "transform", value: value)
 }
 

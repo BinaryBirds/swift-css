@@ -20,7 +20,7 @@ public enum WordBreakValue: String {
     case inherit
 }
 
-func WordBreak(_ value: String) -> Property {
+public func WordBreak(_ value: String) -> Property {
     Property(name: "word-break", value: value)
 }
 

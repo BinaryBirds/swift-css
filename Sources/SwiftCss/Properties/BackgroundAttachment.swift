@@ -18,7 +18,7 @@ public enum BackgroundAttachmentValue: String {
     case inherit
 }
 
-func BackgroundAttachment(_ value: String) -> Property {
+public func BackgroundAttachment(_ value: String) -> Property {
     Property(name: "background-attachment", value: value)
 }
 

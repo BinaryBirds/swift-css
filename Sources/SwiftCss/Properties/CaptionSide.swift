@@ -16,7 +16,7 @@ public enum CaptionSideValue: String {
     case inherit
 }
 
-func CaptionSide(_ value: String) -> Property {
+public func CaptionSide(_ value: String) -> Property {
     Property(name: "caption-side", value: value)
 }
 

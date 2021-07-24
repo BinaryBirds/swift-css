@@ -15,7 +15,7 @@ public enum FontVariantpositionValue: String {
     case unset
 }
 
-func FontVariantPosition(_ value: String) -> Property {
+public func FontVariantPosition(_ value: String) -> Property {
     Property(name: "font-variant-position", value: value)
 }
 

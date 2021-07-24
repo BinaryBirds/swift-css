@@ -18,7 +18,7 @@ public enum BackgroundClipValue: String {
     case inherit
 }
 
-func BackgroundClip(_ value: String) -> Property {
+public func BackgroundClip(_ value: String) -> Property {
     Property(name: "background-clip", value: value)
 }
 

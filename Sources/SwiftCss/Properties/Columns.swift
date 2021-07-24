@@ -28,7 +28,7 @@ public enum ColumnsValue {
     }
 }
 
-func Columns(_ value: String) -> Property {
+public func Columns(_ value: String) -> Property {
     Property(name: "columns", value: value)
 }
 

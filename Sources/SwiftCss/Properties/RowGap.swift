@@ -29,7 +29,7 @@ public enum RowGapValue {
     }
 }
 
-func RowGap(_ value: String) -> Property {
+public func RowGap(_ value: String) -> Property {
     Property(name: "row-gap", value: value)
 }
 

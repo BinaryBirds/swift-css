@@ -16,7 +16,7 @@ public enum ColumnSpanValue: String {
     case inherit
 }
 
-func ColumnSpan(_ value: String) -> Property {
+public func ColumnSpan(_ value: String) -> Property {
     Property(name: "column-span", value: value)
 }
 

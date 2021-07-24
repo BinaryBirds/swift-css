@@ -22,7 +22,7 @@ public enum BackgroundSizeValue: String {
     case inherit
 }
 
-func BackgroundSize(_ value: String) -> Property {
+public func BackgroundSize(_ value: String) -> Property {
     Property(name: "background-size", value: value)
 }
 

@@ -39,7 +39,7 @@ public enum TransformOriginValue {
     }
 }
 
-func TransformOrigin(_ value: String) -> Property {
+public func TransformOrigin(_ value: String) -> Property {
     Property(name: "transform-origin", value: value)
 }
 

@@ -29,7 +29,7 @@ public enum OutlineColorValue {
     }
 }
 
-func OutlineColor(_ value: String) -> Property {
+public func OutlineColor(_ value: String) -> Property {
     Property(name: "outline-color", value: value)
 }
 

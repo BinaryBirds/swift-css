@@ -34,7 +34,7 @@ public enum TextCombineUprightValue {
     }
 }
 
-func TextCombineUpright(_ value: String) -> Property {
+public func TextCombineUpright(_ value: String) -> Property {
     Property(name: "text-combine-upright", value: value)
 }
 

@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func PaddingLeft(_ value: String) -> Property {
+public func PaddingLeft(_ value: String) -> Property {
     Property(name: "padding-left", value: value)
 }
 

@@ -16,7 +16,7 @@ public enum TableLayoutValue: String {
     case inherit
 }
 
-func TableLayout(_ value: String) -> Property {
+public func TableLayout(_ value: String) -> Property {
     Property(name: "table-layout", value: value)
 }
 

@@ -16,7 +16,7 @@ public enum ZIndexValue: String {
     case inherit
 }
 
-func ZIndex(_ value: String) -> Property {
+public func ZIndex(_ value: String) -> Property {
     Property(name: "z-index", value: value)
 }
 

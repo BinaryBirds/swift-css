@@ -18,7 +18,7 @@ public enum TextUnderlinePositionValue: String {
     case unset
 }
 
-func TextUnderlinePosition(_ value: String) -> Property {
+public func TextUnderlinePosition(_ value: String) -> Property {
     Property(name: "text-underline-position", value: value)
 }
 

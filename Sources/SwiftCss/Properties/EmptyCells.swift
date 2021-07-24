@@ -16,11 +16,11 @@ public enum EmptyCellsValue: String {
     case inherit
 }
 
-func EmptyCells(_ value: String) -> Property {
+public func EmptyCells(_ value: String) -> Property {
     Property(name: "empty-cells", value: value)
 }
 
 /// Specifies whether or not to display borders and background on empty cells in a table
-func EmptyCells(_ value: EmptyCellsValue = .show) -> Property {
+public func EmptyCells(_ value: EmptyCellsValue = .show) -> Property {
     EmptyCells(value.rawValue)
 }

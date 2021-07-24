@@ -38,7 +38,7 @@ public enum TransitionDelayValue {
     }
 }
 
-func TransitionDelay(_ value: String) -> Property {
+public func TransitionDelay(_ value: String) -> Property {
     Property(name: "transition-delay", value: value)
 }
 

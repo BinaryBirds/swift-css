@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-enum LineBreakValue: String {
+public enum LineBreakValue: String {
     case auto
     case loose
     case normal
@@ -17,11 +17,11 @@ enum LineBreakValue: String {
     case unset
 }
 
-func LineBreak(_ value: String) -> Property {
+public func LineBreak(_ value: String) -> Property {
     Property(name: "line-break", value: value)
 }
 
 /// Specifies how/if to break lines
-func LineBreak(_ value: LineBreakValue = .auto) -> Property {
+public func LineBreak(_ value: LineBreakValue = .auto) -> Property {
     LineBreak(value.rawValue)
 }

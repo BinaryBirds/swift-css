@@ -18,7 +18,7 @@ public enum FlexWrapValue: String {
     case inherit
 }
 
-func FlexWrap(_ value: String) -> Property {
+public func FlexWrap(_ value: String) -> Property {
     Property(name: "flex-wrap", value: value)
 }
 

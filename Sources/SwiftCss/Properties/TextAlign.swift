@@ -20,7 +20,7 @@ public enum TextAlignValue: String {
     case inherit
 }
 
-func TextAlign(_ value: String) -> Property {
+public func TextAlign(_ value: String) -> Property {
     Property(name: "text-align", value: value)
 }
 

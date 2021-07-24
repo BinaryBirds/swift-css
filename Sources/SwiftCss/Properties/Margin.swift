@@ -29,7 +29,7 @@ public enum MarginValue {
     }
 }
 
-func Margin(_ value: String) -> Property {
+public func Margin(_ value: String) -> Property {
     Property(name: "margin", value: value)
 }
 

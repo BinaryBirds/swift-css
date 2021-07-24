@@ -23,7 +23,7 @@ public enum FontVariantLigaturesValue: String {
     case unset
 }
 
-func FontVariantLigatures(_ value: String) -> Property {
+public func FontVariantLigatures(_ value: String) -> Property {
     Property(name: "font-variant-ligatures", value: value)
 }
 

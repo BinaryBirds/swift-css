@@ -16,7 +16,7 @@ public enum AnimationPlayStateValue: String {
     case inherit
 }
 
-func AnimationPlayState(_ value: String) -> Property {
+public func AnimationPlayState(_ value: String) -> Property {
     Property(name: "animation-play-state", value: value)
 }
 

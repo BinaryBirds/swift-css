@@ -25,7 +25,7 @@ public enum FontFamilyValue {
     }
 }
 
-func FontFamily(_ value: String) -> Property {
+public func FontFamily(_ value: String) -> Property {
     Property(name: "font-family", value: value)
 }
 

@@ -23,7 +23,7 @@ public enum FontVariantEastAsianValue: String {
     case unset
 }
 
-func FontVariantEastAsian(_ value: String) -> Property {
+public func FontVariantEastAsian(_ value: String) -> Property {
     Property(name: "font-variant-east-asian", value: value)
 }
 

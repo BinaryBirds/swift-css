@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func BackgroundColor(_ value: String) -> Property {
+public func BackgroundColor(_ value: String) -> Property {
     Property(name: "background-color", value: value)
 }
 

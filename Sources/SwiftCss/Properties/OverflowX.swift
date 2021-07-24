@@ -5,7 +5,7 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-func OverflowX(_ value: String) -> Property {
+public func OverflowX(_ value: String) -> Property {
     Property(name: "overflow-x", value: value)
 }
 

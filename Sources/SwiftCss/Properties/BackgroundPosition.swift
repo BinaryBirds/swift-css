@@ -84,7 +84,7 @@ public enum BackgroundPositionValue {
     }
 }
 
-func BackgroundPosition(_ value: String) -> Property {
+public func BackgroundPosition(_ value: String) -> Property {
     Property(name: "background-position", value: value)
 }
 

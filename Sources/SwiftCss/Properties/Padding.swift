@@ -25,7 +25,7 @@ public enum PaddingValue {
     }
 }
 
-func Padding(_ value: String) -> Property {
+public func Padding(_ value: String) -> Property {
     Property(name: "padding", value: value)
 }
 

@@ -40,7 +40,7 @@ public enum AnimationDelayValue {
     }
 }
 
-func AnimationDelay(_ value: String) -> Property {
+public func AnimationDelay(_ value: String) -> Property {
     Property(name: "animation-delay", value: value)
 }
 

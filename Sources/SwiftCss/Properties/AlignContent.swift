@@ -26,7 +26,7 @@ public enum AlignContentValue: String {
     case inherit
 }
 
-func AlignContent(_ value: String) -> Property {
+public func AlignContent(_ value: String) -> Property {
     Property(name: "align-content", value: value)
 }
 

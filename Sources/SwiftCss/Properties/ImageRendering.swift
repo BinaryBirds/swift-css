@@ -15,7 +15,7 @@ public enum ImageRenderingValue: String {
     case unset
 }
 
-func ImageRendering(_ value: String) -> Property {
+public func ImageRendering(_ value: String) -> Property {
     Property(name: "image-rendering", value: value)
 }
 

@@ -47,7 +47,7 @@ public enum BoxShadowValue {
 }
 
 
-func BoxShadow(_ value: String) -> Property {
+public func BoxShadow(_ value: String) -> Property {
     Property(name: "box-shadow", value: value)
 }
 

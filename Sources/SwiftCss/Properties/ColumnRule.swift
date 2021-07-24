@@ -24,7 +24,7 @@ public enum ColumnRuleValue {
     }
 }
 
-func ColumnRule(_ value: String) -> Property {
+public func ColumnRule(_ value: String) -> Property {
     Property(name: "column-rule", value: value)
 }
 

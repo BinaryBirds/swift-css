@@ -21,7 +21,7 @@ public enum GridTemplateAreasValue {
     }
 }
 
-func GridTemplateAreas(_ value: String) -> Property {
+public func GridTemplateAreas(_ value: String) -> Property {
     Property(name: "grid-template-areas", value: value)
 }
 

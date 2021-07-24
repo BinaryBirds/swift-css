@@ -31,7 +31,7 @@ public enum BorderSpacingValue {
     }
 }
 
-func BorderSpacing(_ value: String) -> Property {
+public func BorderSpacing(_ value: String) -> Property {
     Property(name: "border-spacing", value: value)
 }
 

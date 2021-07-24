@@ -25,7 +25,7 @@ public enum OrderValue {
     }
 }
 
-func Order(_ value: String) -> Property {
+public func Order(_ value: String) -> Property {
     Property(name: "order", value: value)
 }
 

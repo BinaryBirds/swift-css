@@ -20,7 +20,7 @@ public enum TextDecorationLineValue: String {
     case inherit
 }
 
-func TextDecorationLine(_ value: String) -> Property {
+public func TextDecorationLine(_ value: String) -> Property {
     Property(name: "text-decoration-line", value: value)
 }
 

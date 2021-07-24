@@ -21,7 +21,7 @@ public enum VisibilityValue: String {
     case inherit
 }
 
-func Visibility(_ value: String) -> Property {
+public func Visibility(_ value: String) -> Property {
     Property(name: "visibility", value: value)
 }
 

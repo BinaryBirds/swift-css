@@ -16,7 +16,7 @@ public enum PageBreakInsideValue: String {
     case inherit
 }
 
-func PageBreakInside(_ value: String) -> Property {
+public func PageBreakInside(_ value: String) -> Property {
     Property(name: "page-break-inside", value: value)
 }
 

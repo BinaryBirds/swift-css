@@ -22,7 +22,7 @@ public enum PageBreakBeforeValue: String {
     case inherit
 }
 
-func PageBreakBefore(_ value: String) -> Property {
+public func PageBreakBefore(_ value: String) -> Property {
     Property(name: "page-break-before", value: value)
 }
 

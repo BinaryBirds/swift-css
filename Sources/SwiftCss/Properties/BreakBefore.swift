@@ -40,7 +40,7 @@ public enum BreakBeforeValue: String {
     case inherit
 }
 
-func BreakBefore(_ value: String) -> Property {
+public func BreakBefore(_ value: String) -> Property {
     Property(name: "break-before", value: value)
 }
 

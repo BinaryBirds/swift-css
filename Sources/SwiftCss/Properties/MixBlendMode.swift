@@ -36,7 +36,7 @@ public enum MixBlendModeValue: String {
     case luminosity
 }
 
-func MixBlendMode(_ value: String) -> Property {
+public func MixBlendMode(_ value: String) -> Property {
     Property(name: "mix-blend-mode", value: value)
 }
 

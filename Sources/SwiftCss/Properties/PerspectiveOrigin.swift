@@ -46,7 +46,7 @@ public enum PerspectiveOriginValue {
     }
 }
 
-func PerspectiveOrigin(_ value: String) -> Property {
+public func PerspectiveOrigin(_ value: String) -> Property {
     Property(name: "perspective-origin", value: value)
 }
 

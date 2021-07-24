@@ -20,7 +20,7 @@ public enum TextTransformValue: String {
     case inherit
 }
 
-func TextTransform(_ value: String) -> Property {
+public func TextTransform(_ value: String) -> Property {
     Property(name: "text-transform", value: value)
 }
 

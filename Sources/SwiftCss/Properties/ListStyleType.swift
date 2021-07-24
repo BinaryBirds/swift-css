@@ -57,7 +57,7 @@ public enum ListStyleTypeValue: String {
 }
 
 /// Specifies the type of list-item marker
-func ListStyleType(_ value: String) -> Property {
+public func ListStyleType(_ value: String) -> Property {
     Property(name: "list-style-type", value: value)
 }
 

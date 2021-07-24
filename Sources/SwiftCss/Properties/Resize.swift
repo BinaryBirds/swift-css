@@ -20,7 +20,7 @@ public enum ResizeValue: String {
     case inherit
 }
 
-func Resize(_ value: String) -> Property {
+public func Resize(_ value: String) -> Property {
     Property(name: "resize", value: value)
 }
 

@@ -24,7 +24,7 @@ public enum AlignSelfValue: String {
     case inherit
 }
 
-func AlignSelf(_ value: String) -> Property {
+public func AlignSelf(_ value: String) -> Property {
     Property(name: "align-self", value: value)
 }
 

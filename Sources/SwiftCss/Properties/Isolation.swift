@@ -16,7 +16,7 @@ public enum IsolationValue: String {
     case inherit
 }
 
-func Isolation(_ value: String) -> Property {
+public func Isolation(_ value: String) -> Property {
     Property(name: "isolation", value: value)
 }
 

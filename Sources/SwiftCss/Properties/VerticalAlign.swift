@@ -57,7 +57,7 @@ public enum VerticalAlignValue {
     }
 }
 
-func VerticalAlign(_ value: String) -> Property {
+public func VerticalAlign(_ value: String) -> Property {
     Property(name: "vertical-align", value: value)
 }
 

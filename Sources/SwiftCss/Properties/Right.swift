@@ -29,7 +29,7 @@ public enum RightValue {
     }
 }
 
-func Right(_ value: String) -> Property {
+public func Right(_ value: String) -> Property {
     Property(name: "right", value: value)
 }
 

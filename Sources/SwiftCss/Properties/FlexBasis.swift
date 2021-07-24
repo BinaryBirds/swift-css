@@ -29,7 +29,7 @@ public enum FlexBasisValue {
     }
 }
 
-func FlexBasis(_ value: String) -> Property {
+public func FlexBasis(_ value: String) -> Property {
     Property(name: "flex-basis", value: value)
 }
 

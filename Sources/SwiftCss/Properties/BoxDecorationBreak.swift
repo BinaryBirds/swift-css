@@ -16,7 +16,7 @@ public enum BoxDecorationBreakValue: String {
     case inherit
 }
 
-func BoxDecorationBreak(_ value: String) -> Property {
+public func BoxDecorationBreak(_ value: String) -> Property {
     Property(name: "box-decoration-break", value: value)
 }
 

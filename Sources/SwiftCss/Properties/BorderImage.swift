@@ -36,7 +36,7 @@ public enum BorderImageValue {
     }
 }
 
-func BorderImage(_ value: String) -> Property {
+public func BorderImage(_ value: String) -> Property {
     Property(name: "border-image", value: value)
 }
 

@@ -27,7 +27,7 @@ public enum FlexGrowValue {
     }
 }
 
-func FlexGrow(_ value: String) -> Property {
+public func FlexGrow(_ value: String) -> Property {
     Property(name: "flex-grow", value: value)
 }
 

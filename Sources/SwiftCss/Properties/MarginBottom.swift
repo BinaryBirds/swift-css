@@ -6,7 +6,7 @@
 //
 
 /// Sets the bottom margin of an element
-func MarginBottom(_ value: String) -> Property {
+public func MarginBottom(_ value: String) -> Property {
     Property(name: "margin-bottom", value: value)
 }
 

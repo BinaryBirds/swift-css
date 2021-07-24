@@ -28,7 +28,7 @@ public enum TransitionValue {
     }
 }
 
-func Transition(_ value: String) -> Property {
+public func Transition(_ value: String) -> Property {
     Property(name: "transition", value: value)
 }
 

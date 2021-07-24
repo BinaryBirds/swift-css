@@ -15,7 +15,7 @@ public enum OverflowWrapValue: String {
     case unset
 }
 
-func OverflowWrap(_ value: String) -> Property {
+public func OverflowWrap(_ value: String) -> Property {
     Property(name: "overflow-wrap", value: value)
 }
 

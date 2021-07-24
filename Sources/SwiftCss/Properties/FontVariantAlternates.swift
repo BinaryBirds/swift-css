@@ -49,7 +49,7 @@ public enum FontVariantAlternatesValue {
     }
 }
 
-func FontVariantAlternates(_ value: String) -> Property {
+public func FontVariantAlternates(_ value: String) -> Property {
     Property(name: "font-variant-alternates", value: value)
 }
 

@@ -37,7 +37,7 @@ public enum OutlineWidthValue {
     }
 }
 
-func OutlineWidth(_ value: String) -> Property {
+public func OutlineWidth(_ value: String) -> Property {
     Property(name: "outline-width", value: value)
 }
 

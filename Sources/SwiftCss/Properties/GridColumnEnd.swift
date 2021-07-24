@@ -25,7 +25,7 @@ public enum GridColumnEndValue {
     }
 }
 
-func GridColumnEnd(_ value: String) -> Property {
+public func GridColumnEnd(_ value: String) -> Property {
     Property(name: "grid-column-end", value: value)
 }
 

@@ -29,7 +29,7 @@ public enum LeftValue {
     }
 }
 
-func Left(_ value: String) -> Property {
+public func Left(_ value: String) -> Property {
     Property(name: "left", value: value)
 }
 

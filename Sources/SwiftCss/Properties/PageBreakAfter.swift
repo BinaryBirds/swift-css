@@ -22,7 +22,7 @@ public enum PageBreakAfterValue: String {
     case inherit
 }
 
-func PageBreakAfter(_ value: String) -> Property {
+public func PageBreakAfter(_ value: String) -> Property {
     Property(name: "page-break-after", value: value)
 }
 

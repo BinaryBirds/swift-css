@@ -54,7 +54,7 @@ public enum DisplayValue: String {
     case inherit
 }
 
-func Display(_ value: String) -> Property {
+public func Display(_ value: String) -> Property {
     Property(name: "display", value: value)
 }
 

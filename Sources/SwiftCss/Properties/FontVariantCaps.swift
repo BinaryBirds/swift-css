@@ -28,7 +28,7 @@ public enum FontVariantCapsValue: String {
     case unset
 }
 
-func FontVariantCaps(_ value: String) -> Property {
+public func FontVariantCaps(_ value: String) -> Property {
     Property(name: "font-variant-caps", value: value)
 }
 

@@ -28,7 +28,7 @@ public enum FontLanguageOverrideValue {
     }
 }
 
-func FontLanguageOverride(_ value: String) -> Property {
+public func FontLanguageOverride(_ value: String) -> Property {
     Property(name: "font-language-override", value: value)
 }
 

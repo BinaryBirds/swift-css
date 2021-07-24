@@ -30,7 +30,7 @@ public enum FontStretchValue: String {
     case inherit
 }
 
-func FontStretch(_ value: String) -> Property {
+public func FontStretch(_ value: String) -> Property {
     Property(name: "font-stretch", value: value)
 }
 

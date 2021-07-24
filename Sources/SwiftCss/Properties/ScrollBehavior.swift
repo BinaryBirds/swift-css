@@ -16,7 +16,7 @@ public enum ScrollBehaviorValue: String {
     case inherit
 }
 
-func ScrollBehavior(_ value: String) -> Property {
+public func ScrollBehavior(_ value: String) -> Property {
     Property(name: "scroll-behavior", value: value)
 }
 

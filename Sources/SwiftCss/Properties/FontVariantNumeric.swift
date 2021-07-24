@@ -22,7 +22,7 @@ public enum FontVariantNumericValue: String {
     case unset
 }
 
-func FontVariantNumeric(_ value: String) -> Property {
+public func FontVariantNumeric(_ value: String) -> Property {
     Property(name: "font-variant-numeric", value: value)
 }
 

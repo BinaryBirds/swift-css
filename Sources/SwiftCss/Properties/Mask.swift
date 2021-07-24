@@ -8,6 +8,6 @@
 // @TODO: add proper mask support
 // https://developer.mozilla.org/en-US/docs/Web/CSS/mask
 /// Hides an element by masking or clipping the image at specific places
-func Mask(_ value: String) -> Property {
+public func Mask(_ value: String) -> Property {
     Property(name: "mask", value: value)
 }

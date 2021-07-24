@@ -14,7 +14,7 @@ public enum AllValue: String {
     case unset
 }
 
-func All(_ value: String) -> Property {
+public func All(_ value: String) -> Property {
     Property(name: "all", value: value)
 }
 
