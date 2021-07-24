@@ -5,8 +5,8 @@
 //  Created by Tibor Bodecs on 2021. 07. 09..
 //
 
-struct Media: CSSRepresentable {
-    
+struct Media: Rule {
+
     var query: String?
     var selectors: [Selector]
 
@@ -27,7 +27,6 @@ struct Media: CSSRepresentable {
 //        static let standalone = Query(rawValue: 1 << 6) // standalone app
 //    }
 
-    
     var css: String {
         let css = selectors.map(\.css).joined()
         guard let query = query else {

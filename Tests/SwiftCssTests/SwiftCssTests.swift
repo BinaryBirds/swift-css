@@ -11,7 +11,7 @@ import XCTest
 final class SwiftCssTests: XCTestCase {
     
     func testCss001() {
-        @MediaBuilder func buildCSS() -> [Media] {
+        @RuleBuilder func buildCSS() -> [Rule] {
             Media {
                 All {
                     Margin(.zero)
@@ -39,7 +39,7 @@ final class SwiftCssTests: XCTestCase {
     }
     
     func testExample() {
-        @MediaBuilder func buildCSS() -> [Media] {
+        @RuleBuilder func buildCSS() -> [Rule] {
             Media {
                 Element(.div) {
                     BackgroundColor(.red)
