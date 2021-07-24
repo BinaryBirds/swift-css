@@ -109,11 +109,26 @@ final class SwiftCssTests: XCTestCase {
         @RuleBuilder func buildCSS() -> [Rule] {
             Media {
                 Root {
-                    Var("size", "400px")
+                    Variable("size", "400px")
                 }
                 
                 Selector(".container") {
                     Width("var(--size)")
+                }
+            }
+            Media(.xs) {
+                Root {
+                    Variable("size", "200px")
+                }
+            }
+            Media(.dark) {
+                Root {
+                    Variable("size", "500px")
+                }
+            }
+            Media(.standalone) {
+                Root {
+                    Variable("size", "460px")
                 }
             }
         }

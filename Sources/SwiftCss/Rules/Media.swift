@@ -7,6 +7,23 @@
 
 public struct Media: Rule {
 
+    public enum Query: String {
+        /// 0-599px
+        case xs = "screen and (max-width: 599px)"
+        /// 600-899px
+        case s = "screen and (min-width: 600px)"
+        /// 900-1199px
+        case normal = "screen and (min-width: 900px)"
+        /// 1200-1799px
+        case l = "screen and (min-width: 1200px)"
+        /// 1800+px
+        case xl = "screen and (min-width: 1800px)"
+        /// dark mode
+        case dark = "screen and (prefers-color-scheme: dark)"
+        /// standalone app
+        case standalone = "screen and (display-mode: standalone)"
+    }
+
     var query: String?
     var selectors: [Selector]
 
@@ -14,18 +31,10 @@ public struct Media: Rule {
         self.query = query
         self.selectors = builder()
     }
-
-//    struct Query: OptionSet {
-//        let rawValue: Int
-//
-//        static let xs         = Query(rawValue: 1 << 0) // 0-599
-//        static let s          = Query(rawValue: 1 << 1) // 600-899
-//        static let normal     = Query(rawValue: 1 << 2) // 900-1199
-//        static let l          = Query(rawValue: 1 << 3) // 1200-1799
-//        static let xl         = Query(rawValue: 1 << 4) // 1800+
-//        static let dark       = Query(rawValue: 1 << 5) // dark mode
-//        static let standalone = Query(rawValue: 1 << 6) // standalone app
-//    }
+    
+    public init(_ query: Query, @SelectorBuilder _ builder: () -> [Selector]) {
+        self.init(query.rawValue, builder)
+    }    
 
     public var css: String {
         let css = selectors.map(\.css).joined()
