@@ -7,7 +7,7 @@
 
 public struct Media: Rule {
 
-    public enum Query: String {
+    public enum Screen: String {
         /// 0-599px
         case xs = "screen and (max-width: 599px)"
         /// 600-899px
@@ -20,7 +20,7 @@ public struct Media: Rule {
         case xl = "screen and (min-width: 1800px)"
         /// dark mode
         case dark = "screen and (prefers-color-scheme: dark)"
-        /// standalone app
+        /// standalone app screen
         case standalone = "screen and (display-mode: standalone)"
     }
 
@@ -32,8 +32,8 @@ public struct Media: Rule {
         self.selectors = builder()
     }
     
-    public init(_ query: Query, @SelectorBuilder _ builder: () -> [Selector]) {
-        self.init(query.rawValue, builder)
+    public init(screen: Screen, @SelectorBuilder _ builder: () -> [Selector]) {
+        self.init(screen.rawValue, builder)
     }    
 
     public var css: String {

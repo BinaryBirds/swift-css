@@ -116,17 +116,17 @@ final class SwiftCssTests: XCTestCase {
                     Width("var(--size)")
                 }
             }
-            Media(.xs) {
+            Media(screen: .xs) {
                 Root {
                     Variable("size", "200px")
                 }
             }
-            Media(.dark) {
+            Media(screen: .dark) {
                 Root {
                     Variable("size", "500px")
                 }
             }
-            Media(.standalone) {
+            Media(screen: .standalone) {
                 Root {
                     Variable("size", "460px")
                 }
@@ -145,17 +145,17 @@ final class SwiftCssTests: XCTestCase {
                     Background(.color(.red))
                 }
             }
-            Media(.xs) {
+            Media(screen: .xs) {
                 Root {
                     Background(.color(.blue))
                 }
             }
-            Media(.dark) {
+            Media(screen: .dark) {
                 Root {
                     Background(.color(.green))
                 }
             }
-            Media(.standalone) {
+            Media(screen: .standalone) {
                 Body {
                     Background(.color(.yellow))
                 }
