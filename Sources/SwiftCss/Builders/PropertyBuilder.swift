@@ -7,7 +7,7 @@
 
 @resultBuilder
 public enum PropertyBuilder {
-    static func buildBlock(_ components: Property...) -> [Property] {
+    public static func buildBlock(_ components: Property...) -> [Property] {
         components
     }
 }

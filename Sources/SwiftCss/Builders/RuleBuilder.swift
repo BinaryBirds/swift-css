@@ -7,7 +7,7 @@
 
 @resultBuilder
 public enum RuleBuilder {
-    static func buildBlock(_ components: Rule...) -> [Rule] {
+    public static func buildBlock(_ components: Rule...) -> [Rule] {
         components
     }
 }

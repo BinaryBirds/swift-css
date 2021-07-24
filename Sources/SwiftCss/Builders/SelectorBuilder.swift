@@ -7,7 +7,7 @@
 
 @resultBuilder
 public enum SelectorBuilder {
-    static func buildBlock(_ components: Selector...) -> [Selector] {
+    public static func buildBlock(_ components: Selector...) -> [Selector] {
         components
     }
 }
