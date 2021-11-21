@@ -10,6 +10,7 @@ import Foundation
 public struct StylesheetRenderer {
     
     private let newline: String
+    private let singleSpace: String
     public let minify: Bool
     public let indent: Int
     
@@ -17,6 +18,7 @@ public struct StylesheetRenderer {
         self.minify = minify
         self.indent = minify ? 0 : indent
         self.newline = minify ? "" : "\n"
+        self.singleSpace = minify ? "" : " "
     }
     
     public func render(_ rules: [Rule]) -> String {
@@ -28,19 +30,21 @@ public struct StylesheetRenderer {
                 result += #"@charset ""# + charset.name + #"";"# + newline
             case let value as FontFace:
                 let properties = value.properties.map { renderProperty($0) }.joined(separator: newline)
-                result += "@font-face {\n\t" + properties + "\n}\n"
+                result += "@font-face {" + newline + properties + newline + "}" + newline
             /// @import "mobstyle.css" screen and (max-width: 768px);
             case let value as Import:
                 result += "@import " + value.name + ";" + newline
             case let keyframes as Keyframes:
                 let selectors = keyframes.selectors.map { renderSelector($0) }.joined(separator: newline)
-                result += "@keyframes " + keyframes.name + " {\n\t" + selectors + "\n}\n"
+                result += "@keyframes " + keyframes.name + singleSpace + "{" + newline + selectors + newline + "}" + newline
             case let media as Media:
-                var selectors = media.selectors.map { renderSelector($0) }.joined(separator: newline)
+                let level = media.query != nil ? 1 : 0
+                var selectors = media.selectors.map { renderSelector($0, level: level) }.joined(separator: newline)
                 if let query = media.query {
-                    selectors = "@media " + query + " {\n\t" + selectors + "\n}\n"
+                    print(query)
+                    selectors = "@media " + query + singleSpace + "{" + newline + selectors + newline + "}"
                 }
-                result += selectors
+                result += selectors + newline
             default:
                 fatalError("unknown rule object")
             }
@@ -50,16 +54,21 @@ public struct StylesheetRenderer {
     
     // MARK: - helpers
     
-    private func renderProperty(_ property: Property) -> String {
-        "\t" + property.name + ": " + property.value + (property.isImportant ? " !important" : "") + ";\n"
+    private func renderProperty(_ property: Property, level: Int = 0) -> String {
+        let spaces = String(repeating: " ", count: level * indent)
+        return spaces + property.name + ":" + singleSpace + property.value + (property.isImportant ? " !important" : "")
     }
     
-    private func renderSelector(_ selector: Selector) -> String {
+    private func renderSelector(_ selector: Selector, level: Int = 0) -> String {
+        let spaces = String(repeating: " ", count: level * indent)
         var suffix = ""
         if let pseudo = selector.pseudo {
             suffix = pseudo
         }
-        let properties = selector.properties.map { renderProperty($0) }.joined(separator: newline)
-        return selector.name + suffix + " {\n" + properties + "}\n"
+        let properties = selector.properties.map { renderProperty($0, level: level + 1) }.joined(separator: ";" + newline)
+        return spaces + selector.name + suffix + singleSpace + "{" + newline + properties + newline + spaces + "}"
     }
 }
+
+//@charset "UTF-8";:root{margin:8.0px 8px;padding:8.0px 8.0px}@media screen and (prefers-color-scheme: dark){*{margin:8.0px 8.0px}}
+//@charset "UTF-8";:root{margin:8px 8px;padding:8px 8px}@media screen and (prefers-color-scheme:dark){*{margin:8px 8px}}

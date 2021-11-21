@@ -16,11 +16,18 @@ final class SelectorTests: XCTestCase {
         let val = StylesheetRenderer().render([
             Charset("UTF-8"),
 
+            Media {
+                Root {
+                    Margin(horizontal: .px(8), vertical: .px(8))
+                    Padding(horizontal: .px(8), vertical: .px(8))
+                }
+            },
+
             Media(screen: .dark, {
                 All {
                     Margin(horizontal: .px(8), vertical: .px(8))
                 }
-            })
+            }),
             
         ])
         print(val)
