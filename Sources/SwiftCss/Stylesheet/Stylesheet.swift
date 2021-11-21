@@ -13,47 +13,7 @@ public struct Stylesheet {
     }
 }
 
-//struct Stylesheet {
-//
-//    let color1 = "red"
-//    let color2 = "red"
-//
-//
-//    func general() -> [Selector] {
-//        
-//    }
-//    
-//    func xs() -> [Selector] { //600<
-//        
-//    }
-//    
-//    func s() -> [Selector] { //600+899
-//        
-//    }
-//
-//    func normal() -> [Selector] { //900-12
-//
-//    }
-//
-//    func l() -> [Selector] {//1800+
-//
-//    }
-//
-//    func xl() -> [Selector] {//1800+
-//
-//    }
-//
-//    func dark() -> [Selector] {
-//
-//    }
-//
-//    func standalone() -> [Selector] {
-//
-//    }
-//}
 
-///* general style comes here (mobile first) */
-//
 //@media screen and (max-width: 599px) {
 //    /* extra small device screens only < 600 */
 //}
@@ -69,8 +29,7 @@ public struct Stylesheet {
 //@media screen and (min-width: 1800px) {
 //    /* extra large device screens: 1800+ */
 //}
-//
-///* light mode */
 //@media (prefers-color-scheme: dark) {
 //    /* dark mode */
 //}
+// standalone? pwa?
