@@ -10,6 +10,39 @@ import XCTest
 
 final class SwiftCssTests: XCTestCase {
     
+    func testMinifiedStylesheet() {
+        let css = Stylesheet {
+            Charset("UTF-8")
+            Media {
+                Root {
+                    Margin(horizontal: .px(8.5), vertical: .px(8))
+                    Padding(horizontal: .px(8), vertical: .px(8))
+                }
+            }
+        }
+        XCTAssertEqual(StylesheetRenderer(minify: true, indent: 2).render(css), #"@charset "UTF-8";:root{margin:8.5px 8px;padding:8px 8px}"#)
+    }
+    
+    func testCustomIndentStylesheet() {
+        let css = Stylesheet {
+            Charset("UTF-8")
+            Media {
+                Root {
+                    Margin(horizontal: .px(8.5), vertical: .px(8))
+                    Padding(horizontal: .px(8), vertical: .px(8))
+                }
+            }
+        }
+        print(StylesheetRenderer(indent: 2).render(css))
+        XCTAssertEqual(StylesheetRenderer(indent: 2).render(css), #"""
+                               @charset "UTF-8";
+                               :root {
+                                 margin: 8.5px 8px;
+                                 padding: 8px 8px;
+                               }
+                               """#)
+    }
+    
     func testStylesheet() {
         let css = Stylesheet {
             Charset("UTF-8")
@@ -61,8 +94,6 @@ final class SwiftCssTests: XCTestCase {
                                }
                                """#)
     }
-    
-    
     
     func testVariable() {
         let css = Stylesheet {

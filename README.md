@@ -36,7 +36,7 @@ let css = Stylesheet {
     }
 }
     
-print(StylesheetRenderer().render(css))
+print(StylesheetRenderer(minify: false, indent: 4).render(css))
 ```
 
 ## Credits & references
