@@ -10,103 +10,62 @@ import XCTest
 
 final class SwiftCssTests: XCTestCase {
     
-    func testCss001() {
-        @RuleBuilder func buildCSS() -> [Rule] {
+    func testStylesheet() {
+        let css = Stylesheet {
+            Charset("UTF-8")
+
             Media {
-                All {
-                    Margin(.zero)
-                    Padding(.zero)
+                Root {
+                    Margin(horizontal: .px(8.5), vertical: .px(8))
+                    Padding(horizontal: .px(8), vertical: .px(8))
                 }
-                Element(.body) {
-                    Margin(horizontal: .auto, vertical: .length(.rem(2)))
-                    Background(.color("cafe00"), image: .url("./test.png"), position: .leftTop)
-                    Color(.white)
-                }
-                Element(.a) {
-                    Color(.red)
-                }
-                Element(.a) {
-                    Color(.orange)
-                    BoxShadow(.px(6), .px(4), blur: .px(2), color: "cafe00")
-                }
-                .pseudo(.hover)
             }
-        }
 
-        let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
-        XCTAssertTrue(true)
-    }
-    
-    func testExample() {
-        @RuleBuilder func buildCSS() -> [Rule] {
-            Media {
-                Element(.div) {
-                    BackgroundColor(.red)
-                    Color(.white)
-                    TextAlign("left")
-                }
-                .pseudo(.nthChild(2))
-
-                Id("custom-identifier") {
-                    Background("#222")
-                    Color("cafe00")
+            Media(screen: .s) {
+                Class("button") {
                     Color("#cafe00")
                 }
-                Class("custom-class") {
-                    Background("#333")
-                    Color(.red)
-                }
-                Selector("ul > li > a") {
-                    Background("black")
-                    Color(.blue)
-                        .important()
-                }
             }
-            Media("only screen and (max-width: 600px)") {
-                Element(.div) {
-                    BackgroundColor("#000")
-                    Color(.white)
-                }
-                Id("custom-identifier") {
-                    Background("#222")
-                    Color(.cyan)
-                }
-                Class("custom-class") {
-                    Background("#333")
-                    Color(.aliceBlue)
-                }
-                Selector("ul > li > a") {
-                    Background("black")
-                    Color(.red)
-                        .important()
-                }
-                .pseudo(.hover)
+            Media(screen: .dark, {
                 All {
-                    Background("red")
-                    Padding(.zero)
-                    Margin(.zero)
+                    Margin(horizontal: .px(8), vertical: .px(8))
                 }
-                Element(.p) {
-                    Margin(bottom: .px(20))
-                    MarginBottom(.px(20))
-                }
-                Root {
-                    Color(.blue)
-                    BackgroundColor(.transparent)
-                    AnimationDelay(.seconds(45))
-                    BorderBottomWidth(.length(.px(4)))
+            })
+            Media(screen: .standalone) {
+                Id("lead") {
+                    Background(.color(.red))
                 }
             }
         }
-
-        let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
-        XCTAssertTrue(true)
+        
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               @charset "UTF-8";
+                               :root {
+                                   margin: 8.5px 8px;
+                                   padding: 8px 8px;
+                               }
+                               @media screen and (min-width: 600px) {
+                                   .button {
+                                       color: #cafe00;
+                                   }
+                               }
+                               @media screen and (prefers-color-scheme: dark) {
+                                   * {
+                                       margin: 8px 8px;
+                                   }
+                               }
+                               @media screen and (display-mode: standalone) {
+                                   #lead {
+                                       background: red;
+                                   }
+                               }
+                               """#)
     }
     
+    
+    
     func testVariable() {
-        @RuleBuilder func buildCSS() -> [Rule] {
+        let css = Stylesheet {
             Media {
                 Root {
                     Variable("size", "400px")
@@ -133,13 +92,33 @@ final class SwiftCssTests: XCTestCase {
             }
         }
 
-        let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
-        XCTAssertTrue(true)
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               :root {
+                                   --size: 400px;
+                               }
+                               .container {
+                                   width: var(--size);
+                               }
+                               @media screen and (max-width: 599px) {
+                                   :root {
+                                       --size: 200px;
+                                   }
+                               }
+                               @media screen and (prefers-color-scheme: dark) {
+                                   :root {
+                                       --size: 500px;
+                                   }
+                               }
+                               @media screen and (display-mode: standalone) {
+                                   :root {
+                                       --size: 460px;
+                                   }
+                               }
+                               """#)
     }
     
     func testMediaQueries() {
-        @RuleBuilder func buildCSS() -> [Rule] {
+        let css = Stylesheet {
             Media {
                 Root {
                     Background(.color(.red))
@@ -162,9 +141,26 @@ final class SwiftCssTests: XCTestCase {
             }
         }
 
-        let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
-        XCTAssertTrue(true)
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               :root {
+                                   background: red;
+                               }
+                               @media screen and (max-width: 599px) {
+                                   :root {
+                                       background: blue;
+                                   }
+                               }
+                               @media screen and (prefers-color-scheme: dark) {
+                                   :root {
+                                       background: green;
+                                   }
+                               }
+                               @media screen and (display-mode: standalone) {
+                                   body {
+                                       background: yellow;
+                                   }
+                               }
+                               """#)
     }
 }
 

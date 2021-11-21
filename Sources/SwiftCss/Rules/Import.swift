@@ -16,9 +16,4 @@ public struct Import: Rule {
     public init(_ name: String) {
         self.name = name
     }
-    
-    /// @import "mobstyle.css" screen and (max-width: 768px);
-    public var css: String {
-        "@import " + name + ";"
-    }
 }

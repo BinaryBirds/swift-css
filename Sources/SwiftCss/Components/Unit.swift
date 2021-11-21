@@ -5,6 +5,17 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
+fileprivate extension Double {
+
+    /// converts a double value into an integer if it has no fraction digits, otherwise it uses the double value
+    var asIntOrDouble: String {
+        if truncatingRemainder(dividingBy: 1) == 0 {
+            return String(Int(self))
+        }
+        return String(self)
+    }
+}
+
 public enum Unit {
     case zero
 
@@ -45,35 +56,35 @@ public enum Unit {
         case .zero:
             return "0"
         case .cm(let value):
-            return "\(value)cm"
+            return "\(value.asIntOrDouble)cm"
         case .mm(let value):
-            return "\(value)mm"
+            return "\(value.asIntOrDouble)mm"
         case .in(let value):
-            return "\(value)in"
+            return "\(value.asIntOrDouble)in"
         case .px(let value):
-            return "\(value)px"
+            return "\(value.asIntOrDouble)px"
         case .pt(let value):
-            return "\(value)pt"
+            return "\(value.asIntOrDouble)pt"
         case .pc(let value):
-            return "\(value)pc"
+            return "\(value.asIntOrDouble)pc"
         case .em(let value):
-            return "\(value)em"
+            return "\(value.asIntOrDouble)em"
         case .ex(let value):
-            return "\(value)ex"
+            return "\(value.asIntOrDouble)ex"
         case .ch(let value):
-            return "\(value)ch"
+            return "\(value.asIntOrDouble)ch"
         case .rem(let value):
-            return "\(value)rem"
+            return "\(value.asIntOrDouble)rem"
         case .vw(let value):
-            return "\(value)vw"
+            return "\(value.asIntOrDouble)vw"
         case .vh(let value):
-            return "\(value)vh"
+            return "\(value.asIntOrDouble)vh"
         case .vmin(let value):
-            return "\(value)vmin"
+            return "\(value.asIntOrDouble)vmin"
         case .vmax(let value):
-            return "\(value)vmax"
+            return "\(value.asIntOrDouble)vmax"
         case .percent(let value):
-            return "\(value)%"
+            return "\(value.asIntOrDouble)%"
         }
     }
 }

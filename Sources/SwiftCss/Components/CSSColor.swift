@@ -7,69 +7,69 @@
 
 public struct CSSColor: ExpressibleByStringLiteral {
 
-    private var css: String
+    private var colorValue: String
     
     init(raw: String) {
-        css = raw
+        colorValue = raw
     }
 
 //    init(hex: String) {
 //        css = hex
 //    }
-    
+
     public init(stringLiteral value: StringLiteralType) {
-        css = value
+        colorValue = value
         /// check if length is valid (000, #000, cafe00, #cafe00)
         assert([3,4,6,7].contains(value.count), "Invalid hex string")
 
         /// add # prefix if missing
-        if !css.hasPrefix("#") {
-            css = "#" + css
+        if !colorValue.hasPrefix("#") {
+            colorValue = "#" + colorValue
         }
     }
 
     public init(r: Int, g: Int, b: Int, a: Double? = nil) {
-        css = "\(r),\(g),\(b)"
+        colorValue = "\(r),\(g),\(b)"
         if let a = a {
-            css = "rgba(" + css + ", \(a))"
+            colorValue = "rgba(" + colorValue + ", \(a))"
         }
         else {
-            css = "rgb(" + css + ")"
+            colorValue = "rgb(" + colorValue + ")"
         }
     }
 
     public init(r: Double, g: Double, b: Double, a: Double? = nil) {
-        css = "\(r)%,\(g)%,\(b)%"
+        colorValue = "\(r)%,\(g)%,\(b)%"
         if let a = a {
-            css = "rgba(" + css + ", \(a))"
+            colorValue = "rgba(" + colorValue + ", \(a))"
         }
         else {
-            css = "rgb(" + css + ")"
+            colorValue = "rgb(" + colorValue + ")"
         }
     }
     
     public init(h: Int, s: Int, l: Int, a: Double? = nil) {
-        css = "\(h),\(s),\(l)"
+        colorValue = "\(h),\(s),\(l)"
         if let a = a {
-            css = "hsla(" + css + ", \(a))"
+            colorValue = "hsla(" + colorValue + ", \(a))"
         }
         else {
-            css = "hsl(" + css + ")"
+            colorValue = "hsl(" + colorValue + ")"
         }
     }
 
     public init(h: Double, s: Double, l: Double, a: Double? = nil) {
-        css = "\(h)%,\(s)%,\(l)%"
+        colorValue = "\(h)%,\(s)%,\(l)%"
         if let a = a {
-            css = "hsla(" + css + ", \(a))"
+            colorValue = "hsla(" + colorValue + ", \(a))"
         }
         else {
-            css = "hsl(" + css + ")"
+            colorValue = "hsl(" + colorValue + ")"
         }
     }
     
     var rawValue: String {
-        css
+        colorValue
     }
 }
 

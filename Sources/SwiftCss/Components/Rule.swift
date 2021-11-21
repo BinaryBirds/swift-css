@@ -5,6 +5,6 @@
 //  Created by Tibor Bodecs on 2021. 07. 10..
 //
 
-public protocol Rule: CSSRepresentable {
+public protocol Rule {
     
 }
