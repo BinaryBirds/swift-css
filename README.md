@@ -39,6 +39,28 @@ let css = Stylesheet {
 print(StylesheetRenderer(minify: false, indent: 4).render(css))
 ```
 
+## Install
+
+You can simply use `SwiftCss` as a dependency via the Swift Package Manager:
+
+```swift
+.package(url: "https://github.com/binarybirds/swift-css", from: "1.0.0"),
+```
+
+Add the `SwiftCss` product from the `swift-css` package as a dependency to your target:
+
+```swift
+.product(name: "SwiftCss", package: "swift-css"),
+```
+
+Import the framework:
+
+```swift
+import SwiftCss
+```
+
+That's it.
+
 ## Credits & references
 
 - [Cascading Style Sheets](https://www.w3.org/Style/CSS/)
