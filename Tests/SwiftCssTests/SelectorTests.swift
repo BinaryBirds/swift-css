@@ -13,23 +13,24 @@ final class SelectorTests: XCTestCase {
     // MARK: - margin
     
     func testMargin() {
-        let val = StylesheetRenderer().render([
-            Charset("UTF-8"),
+        let css = Stylesheet {
+            Charset("UTF-8")
 
             Media {
                 Root {
                     Margin(horizontal: .px(8.5), vertical: .px(8))
                     Padding(horizontal: .px(8), vertical: .px(8))
                 }
-            },
+            }
 
             Media(screen: .dark, {
                 All {
                     Margin(horizontal: .px(8), vertical: .px(8))
                 }
-            }),
-            
-        ])
+            })
+        }
+        
+        let val = StylesheetRenderer().render(css)
         print(val)
 //        XCTAssertEqual(Margin(horizontal: .px(8)).css, "\tmargin: 8.0px 0;\n")
 //        XCTAssertEqual(Margin(horizontal: .length(.zero), vertical: .auto).css, "\tmargin: 0 auto;\n")

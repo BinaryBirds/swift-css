@@ -21,9 +21,9 @@ public struct StylesheetRenderer {
         self.singleSpace = minify ? "" : " "
     }
     
-    public func render(_ rules: [Rule]) -> String {
+    public func render(_ stylesheet: Stylesheet) -> String {
         var result = ""
-        for rule in rules {
+        for rule in stylesheet.rules {
             switch rule {
             /// @charset "UTF-8";
             case let charset as Charset:
