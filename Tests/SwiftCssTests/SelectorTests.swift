@@ -23,11 +23,21 @@ final class SelectorTests: XCTestCase {
                 }
             }
 
+            Media(screen: .s) {
+                Class("button") {
+                    Color("#cafe00")
+                }
+            }
             Media(screen: .dark, {
                 All {
                     Margin(horizontal: .px(8), vertical: .px(8))
                 }
             })
+            Media(screen: .standalone) {
+                Id("lead") {
+                    Background(.color(.red))
+                }
+            }
         }
         
         let val = StylesheetRenderer().render(css)

@@ -65,7 +65,7 @@ public struct StylesheetRenderer {
         if let pseudo = selector.pseudo {
             suffix = pseudo
         }
-        let properties = selector.properties.map { renderProperty($0, level: level + 1) }.joined(separator: ";" + newline)
+        let properties = selector.properties.map { renderProperty($0, level: level + 1) }.joined(separator: ";" + newline) + (!minify ? ";" : "")
         return spaces + selector.name + suffix + singleSpace + "{" + newline + properties + newline + spaces + "}"
     }
 }
