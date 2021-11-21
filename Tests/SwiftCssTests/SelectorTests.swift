@@ -11,53 +11,47 @@ import XCTest
 final class SelectorTests: XCTestCase {
     
     // MARK: - margin
-    
-    func testMargin() {
+
+    func testMarginBottom() {
         let css = Stylesheet {
-            Charset("UTF-8")
-
             Media {
-                Root {
-                    Margin(horizontal: .px(8.5), vertical: .px(8))
-                    Padding(horizontal: .px(8), vertical: .px(8))
-                }
-            }
-
-            Media(screen: .s) {
-                Class("button") {
-                    Color("#cafe00")
-                }
-            }
-            Media(screen: .dark, {
                 All {
-                    Margin(horizontal: .px(8), vertical: .px(8))
-                }
-            })
-            Media(screen: .standalone) {
-                Id("lead") {
-                    Background(.color(.red))
+                    MarginTop(.length(.px(8)))
+                    MarginBottom(.length(.percent(25)))
                 }
             }
         }
         
-        let val = StylesheetRenderer().render(css)
-        print(val)
-//        XCTAssertEqual(Margin(horizontal: .px(8)).css, "\tmargin: 8.0px 0;\n")
-//        XCTAssertEqual(Margin(horizontal: .length(.zero), vertical: .auto).css, "\tmargin: 0 auto;\n")
-    }
-
-    func testMarginBottom() {
-//        XCTAssertEqual(MarginBottom(.length(.px(8))).css, "\tmargin-bottom: 8.0px;\n")
-//        XCTAssertEqual(MarginBottom(.length(.percent(25))).css, "\tmargin-bottom: 25.0%;\n")
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               * {
+                                   margin-top: 8px;
+                                   margin-bottom: 25%;
+                               }
+                               """#)
     }
     
     // MARK: - padding
     
     func testPadding() {
-//        XCTAssertEqual(Padding(.zero).css, "\tpadding: 0;\n")
-//        XCTAssertEqual(Padding(.rem(8)).css, "\tpadding: 8.0rem;\n")
-//        XCTAssertEqual(Padding(horizontal: .px(8)).css, "\tpadding: 8.0px 0;\n")
-//        XCTAssertEqual(Padding(horizontal: .length(.zero), vertical: .inherit).css, "\tpadding: 0 inherit;\n")
+        let css = Stylesheet {
+            Media {
+                All {
+                    Padding(.zero)
+                    Padding(.rem(8))
+                    Padding(horizontal: .px(8))
+                    Padding(horizontal: .length(.zero), vertical: .inherit)
+                }
+            }
+        }
+
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               * {
+                                   padding: 0;
+                                   padding: 8rem;
+                                   padding: 8px 0;
+                                   padding: 0 inherit;
+                               }
+                               """#)
     }
 }
 
