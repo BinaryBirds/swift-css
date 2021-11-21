@@ -25,41 +25,27 @@ public struct StylesheetRenderer {
             switch rule {
             /// @charset "UTF-8";
             case let charset as Charset:
-                result += #"@charset ""# + charset.name + #"";"#
+                result += #"@charset ""# + charset.name + #"";"# + newline
             case let value as FontFace:
-                print("ff")
-                //    public var css: String {
-                //        let value = properties.map(\.css).joined()
-                //        return "@font-face {\n\t" + value.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-                //    }
+                let properties = value.properties.map { renderProperty($0) }.joined(separator: newline)
+                result += "@font-face {\n\t" + properties + "\n}\n"
             /// @import "mobstyle.css" screen and (max-width: 768px);
             case let value as Import:
-                print("import")
-                
-            //    public var css: String {
-            //        "@import " + name + ";"
-            //    }
+                result += "@import " + value.name + ";" + newline
             case let keyframes as Keyframes:
-                print("keyframes")
-                //    public var css: String {
-                //        let value = selectors.map(\.css).joined()
-                //        return "@keyframes " + name + " {\n\t" + value.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-                //    }
-
+                let selectors = keyframes.selectors.map { renderSelector($0) }.joined(separator: newline)
+                result += "@keyframes " + keyframes.name + " {\n\t" + selectors + "\n}\n"
             case let media as Media:
-                print("\(media.query ?? "") media")
-                //    public var css: String {
-                //        let css = selectors.map(\.css).joined()
-                //        guard let query = query else {
-                //            return css
-                //        }
-                //        return "@media " + query + " {\n\t" + css.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-                //    }
+                var selectors = media.selectors.map { renderSelector($0) }.joined(separator: newline)
+                if let query = media.query {
+                    selectors = "@media " + query + " {\n\t" + selectors + "\n}\n"
+                }
+                result += selectors
             default:
                 fatalError("unknown rule object")
             }
         }
-        return ""
+        return result
     }
     
     // MARK: - helpers
