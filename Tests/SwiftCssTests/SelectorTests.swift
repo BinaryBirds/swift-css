@@ -18,7 +18,7 @@ final class SelectorTests: XCTestCase {
 
             Media {
                 Root {
-                    Margin(horizontal: .px(8), vertical: .px(8))
+                    Margin(horizontal: .px(8.5), vertical: .px(8))
                     Padding(horizontal: .px(8), vertical: .px(8))
                 }
             },
