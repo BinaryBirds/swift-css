@@ -14,7 +14,7 @@ let css = Stylesheet {
         Element(.div) {
             BackgroundColor(.red)
             Color(.white)
-            TextAlign("left")
+            TextAlign(.left)
         }
         .pseudo(.nthChild(2))
     }
