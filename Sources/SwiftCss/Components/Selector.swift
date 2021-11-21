@@ -6,7 +6,7 @@
 //
 
 /// https://www.w3schools.com/cssref/css_selectors.asp
-public struct Selector: CSSRepresentable {
+public struct Selector {
     var name: String
     var properties: [Property]
     var pseudo: String? = nil
@@ -20,13 +20,5 @@ public struct Selector: CSSRepresentable {
     public init(_ name: String, @PropertyBuilder _ builder: () -> [Property]) {
         self.name = name
         self.properties = builder()
-    }
-    
-    public var css: String {
-        var suffix = ""
-        if let pseudo = pseudo {
-            suffix = pseudo
-        }
-        return name + suffix + " {\n" + properties.map(\.css).joined() + "}\n"
     }
 }

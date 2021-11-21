@@ -34,7 +34,7 @@ final class SwiftCssTests: XCTestCase {
         }
 
         let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
+//        print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
     
@@ -101,7 +101,7 @@ final class SwiftCssTests: XCTestCase {
         }
 
         let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
+//        print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
     
@@ -134,7 +134,7 @@ final class SwiftCssTests: XCTestCase {
         }
 
         let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
+//        print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
     
@@ -163,7 +163,7 @@ final class SwiftCssTests: XCTestCase {
         }
 
         let sel = buildCSS()
-        print(sel.map(\.css).joined(separator: "\n"))
+//        print(sel.map(\.css).joined(separator: "\n"))
         XCTAssertTrue(true)
     }
 }

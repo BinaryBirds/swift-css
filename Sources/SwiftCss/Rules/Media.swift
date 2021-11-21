@@ -35,12 +35,4 @@ public struct Media: Rule {
     public init(screen: Screen, @SelectorBuilder _ builder: () -> [Selector]) {
         self.init(screen.rawValue, builder)
     }    
-
-    public var css: String {
-        let css = selectors.map(\.css).joined()
-        guard let query = query else {
-            return css
-        }
-        return "@media " + query + " {\n\t" + css.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-    }
 }

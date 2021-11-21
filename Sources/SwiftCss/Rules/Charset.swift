@@ -12,9 +12,4 @@ public struct Charset: Rule {
     public init(_ name: String) {
         self.name = name
     }
-    
-    /// @charset "UTF-8";
-    public var css: String {
-        #"@charset ""# + name + #"";"#
-    }
 }

@@ -5,6 +5,10 @@
 //  Created by Tibor Bodecs on 2021. 07. 09..
 //
 
+struct Stylesheet {
+    var rules: [Rule]
+}
+
 //struct Stylesheet {
 //
 //    let color1 = "red"

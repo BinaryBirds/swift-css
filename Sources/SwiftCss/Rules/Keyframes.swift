@@ -14,9 +14,4 @@ public struct Keyframes: Rule {
         self.name = name
         self.selectors = builder()
     }
-    
-    public var css: String {
-        let value = selectors.map(\.css).joined()
-        return "@keyframes " + name + " {\n\t" + value.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-    }
 }

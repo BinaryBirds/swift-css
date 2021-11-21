@@ -6,7 +6,7 @@
 //
 
 /// https://www.w3schools.com/cssref/
-public struct Property: CSSRepresentable {
+public struct Property {
     var name: String
     var value: String
     var isImportant: Bool = false
@@ -16,11 +16,7 @@ public struct Property: CSSRepresentable {
         self.value = value
         self.isImportant = isImportant
     }
-    
-    public var css: String {
-        "\t" + name + ": " + value + (isImportant ? " !important" : "") + ";\n"
-    }
-    
+
     public func important() -> Property {
         guard !isImportant else {
             return self

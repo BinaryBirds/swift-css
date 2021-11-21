@@ -13,8 +13,4 @@ public struct FontFace: Rule {
         self.properties = builder()
     }
     
-    public var css: String {
-        let value = properties.map(\.css).joined()
-        return "@font-face {\n\t" + value.split(separator: "\n").joined(separator: "\n\t") + "\n}\n"
-    }
 }
