@@ -3,7 +3,7 @@
 An awesome Swift CSS DSL library using result builders.
 
 ```swift
-@MediaBuilder func buildCSS() -> [Media] {
+let css = Stylesheet {            
     Media {
         All {
             Background("#222")
@@ -35,7 +35,8 @@ An awesome Swift CSS DSL library using result builders.
         .pseudo(.hover)
     }
 }
-
+    
+print(StylesheetRenderer().render(css))
 ```
 
 ## Credits & references
