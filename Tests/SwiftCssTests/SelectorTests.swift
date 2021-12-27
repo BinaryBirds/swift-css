@@ -12,6 +12,16 @@ final class SelectorTests: XCTestCase {
     
     // MARK: - margin
 
+    func testRules() {
+        let css = Stylesheet([
+            Charset("UTF-8")
+        ])
+        
+        XCTAssertEqual(StylesheetRenderer().render(css), #"""
+                               @charset "UTF-8";
+                               """#)
+    }
+    
     func testMarginBottom() {
         let css = Stylesheet {
             Media {

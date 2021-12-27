@@ -11,4 +11,8 @@ public struct Stylesheet {
     public init(@RuleBuilder _ builder: () -> [Rule]) {
         self.rules = builder()
     }
+
+    public init(_ rules: [Rule]) {
+        self.rules = rules
+    }
 }
