@@ -10,5 +10,9 @@ public enum SelectorBuilder {
     public static func buildBlock(_ components: Selector...) -> [Selector] {
         components
     }
+    
+    public static func buildBlock(_ components: [Selector]) -> [Selector] {
+        components
+    }
 }
 

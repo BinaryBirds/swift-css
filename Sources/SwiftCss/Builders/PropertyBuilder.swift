@@ -10,4 +10,8 @@ public enum PropertyBuilder {
     public static func buildBlock(_ components: Property...) -> [Property] {
         components
     }
+    
+    public static func buildBlock(_ components: [Property]) -> [Property] {
+        components
+    }
 }

@@ -10,4 +10,8 @@ public enum RuleBuilder {
     public static func buildBlock(_ components: Rule...) -> [Rule] {
         components
     }
+    
+    public static func buildBlock(_ components: [Rule]) -> [Rule] {
+        components
+    }
 }
