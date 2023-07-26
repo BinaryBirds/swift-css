@@ -13,7 +13,7 @@ public enum PaddingValue {
     /// Inherits this property from its parent element.
     case inherit
     
-    public var rawValue: String {
+    var rawValue: String {
         switch self {
         case .length(let value):
             return value.rawValue
