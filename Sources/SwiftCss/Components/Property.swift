@@ -7,8 +7,8 @@
 
 /// https://www.w3schools.com/cssref/
 public struct Property {
-    var name: String
-    var value: String
+    public var name: String
+    public var value: String
     var isImportant: Bool = false
     
     public init(name: String, value: String, isImportant: Bool = false) {
